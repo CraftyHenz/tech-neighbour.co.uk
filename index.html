@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TechNeighbour IT Solutions — Big-city IT support, right on your doorstep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF5EB;
+    --cream-2: #F5EBD8;
+    --paper: #FFFCF6;
+    --orange: #E8501F;
+    --orange-deep: #C13F12;
+    --orange-soft: #F8DCCB;
+    --ink: #1C1814;
+    --muted: #76695A;
+    --line: #E5D7BF;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+  .mono-cap { font-family: 'Manrope', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+  /* ───────── NAV ───────── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,245,235,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 46px; height: 46px;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .logo-mark svg { width: 100%; height: 100%; display: block; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; gap: 5px; }
+  .logo-word { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; line-height: 1; }
+  .logo-word .o { color: var(--orange); }
+  .logo-sub {
+    font-size: 9.5px; letter-spacing: 0.32em; color: var(--muted);
+    font-weight: 700; line-height: 1;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .logo-sub::before, .logo-sub::after {
+    content: ""; flex: 1; height: 1px; background: var(--line); min-width: 14px;
+  }
+
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { font-weight: 500; font-size: 15px; color: var(--ink); }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta {
+    background: var(--orange); color: white;
+    padding: 11px 20px; border-radius: 999px;
+    font-weight: 700; font-size: 14px;
+    display: inline-flex; gap: 8px; align-items: center;
+    transition: background .15s;
+  }
+  .nav-cta:hover { background: var(--orange-deep); }
+
+  /* ───────── HERO ───────── */
+  .hero {
+    position: relative;
+    padding: 80px 0 110px;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;
+    position: relative; z-index: 2;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange); font-weight: 700; font-size: 12.5px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(48px, 6vw, 84px);
+    line-height: 1.02;
+    margin: 22px 0 24px;
+    letter-spacing: -0.015em;
+  }
+  .hero h1 em { font-style: italic; color: var(--orange); }
+  .hero p.lede {
+    font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 36px;
+  }
+  .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: #fff;
+    padding: 16px 26px; border-radius: 999px;
+    font-weight: 700; font-size: 15px;
+    display: inline-flex; gap: 10px; align-items: center;
+    box-shadow: 0 10px 24px -8px rgba(232,80,31,.45);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -8px rgba(232,80,31,.55); }
+  .btn-ghost {
+    padding: 16px 22px; border-radius: 999px;
+    font-weight: 600; font-size: 15px;
+    border: 1.5px solid var(--ink);
+    display: inline-flex; gap: 10px; align-items: center;
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+
+  .hero-meta {
+    display: flex; gap: 40px; margin-top: 48px; flex-wrap: wrap;
+  }
+  .hero-meta .m {
+    border-left: 1.5px solid var(--line); padding-left: 14px;
+  }
+  .hero-meta .m b { display: block; font-family: 'DM Serif Display'; font-size: 28px; line-height: 1; }
+  .hero-meta .m span { font-size: 12.5px; color: var(--muted); letter-spacing: 0.06em; }
+
+  /* hero scene */
+  .hero-scene {
+    position: relative; width: 100%; aspect-ratio: 1/1; max-width: 520px; margin-left: auto;
+  }
+  .hero-disc {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    background: var(--cream-2);
+    border: 2px solid var(--orange);
+    background-image:
+      linear-gradient(var(--orange-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--orange-soft) 1px, transparent 1px);
+    background-size: 28px 28px;
+    overflow: hidden;
+  }
+  .hero-disc::after {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.5), transparent 50%);
+  }
+  .hero-house { position: absolute; inset: 0; display: grid; place-items: center; }
+  .hero-house svg { width: 60%; height: auto; }
+
+  .free-badge {
+    position: absolute; top: -10px; left: -20px;
+    width: 150px; height: 150px; border-radius: 50%;
+    background: var(--orange); color: #fff;
+    display: grid; place-items: center; text-align: center;
+    transform: rotate(-12deg);
+    box-shadow: 0 16px 30px -10px rgba(232,80,31,.55);
+    z-index: 3;
+  }
+  .free-badge .big { font-family: 'DM Serif Display'; font-size: 38px; line-height: 1; }
+  .free-badge .small { font-size: 9.5px; letter-spacing: 0.18em; font-weight: 700; line-height: 1.4; margin-top: 6px; padding: 0 14px; }
+
+  .shield-badge {
+    position: absolute; top: 24px; right: -36px;
+    width: 130px; height: 150px;
+    transform: rotate(8deg);
+    z-index: 3;
+    filter: drop-shadow(0 14px 22px rgba(0,0,0,.12));
+  }
+  .shield-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .shield-badge .t {
+    position: absolute; inset: 0;
+    display: grid; place-items: center; text-align: center;
+    font-family: 'DM Serif Display'; font-size: 22px; line-height: 1.05;
+    color: var(--orange); padding: 28px 18px 36px;
+  }
+
+  /* hand-drawn horizon */
+  .horizon {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 180px; opacity: .6; z-index: 1; pointer-events: none;
+  }
+
+  /* ───────── PILLARS ───────── */
+  .pillars {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 70px 0;
+  }
+  .pillar-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  }
+  .pillar {
+    padding: 8px 36px;
+    border-right: 1px solid var(--line);
+    text-align: left;
+  }
+  .pillar:last-child { border-right: 0; }
+  .pillar-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: var(--orange-soft);
+    display: grid; place-items: center;
+    color: var(--orange);
+    margin-bottom: 22px;
+  }
+  .pillar h3 {
+    font-family: 'DM Serif Display'; font-size: 32px; margin: 0 0 8px;
+  }
+  .pillar p { color: var(--muted); margin: 0 0 18px; font-size: 15px; }
+  .pillar a.more {
+    color: var(--orange); font-weight: 700; font-size: 14px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .pillar a.more:hover { gap: 10px; }
+
+  /* ───────── SERVICES ───────── */
+  .services { padding: 110px 0; }
+  .section-head {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: end; margin-bottom: 56px;
+  }
+  .section-head h2 {
+    font-family: 'DM Serif Display'; font-size: clamp(40px, 4vw, 60px);
+    line-height: 1.05; margin: 12px 0 0; letter-spacing: -0.01em;
+  }
+  .section-head h2 em { font-style: italic; color: var(--orange); }
+  .section-head p { color: var(--muted); font-size: 17px; max-width: 460px; margin: 0; }
+
+  .service-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .service {
+    background: var(--paper);
+    padding: 32px;
+    display: flex; gap: 22px;
+    transition: background .2s;
+  }
+  .service:hover { background: var(--cream); }
+  .service .num {
+    font-family: 'DM Serif Display'; font-size: 14px; color: var(--orange);
+    border: 1px solid var(--orange); border-radius: 50%;
+    width: 30px; height: 30px; flex-shrink: 0;
+    display: grid; place-items: center;
+    margin-top: 2px;
+  }
+  .service h4 { font-size: 18px; margin: 0 0 8px; font-weight: 700; }
+  .service p { color: var(--muted); font-size: 14.5px; margin: 0; }
+
+  /* ───────── PROMISE BAR ───────── */
+  .promise {
+    background: var(--orange);
+    color: #fff;
+    padding: 26px 0;
+    overflow: hidden;
+  }
+  .promise-marquee {
+    display: flex; gap: 60px;
+    font-family: 'DM Serif Display'; font-size: 28px; font-style: italic;
+    white-space: nowrap;
+    animation: scroll 32s linear infinite;
+  }
+  .promise-marquee span { display: inline-flex; align-items: center; gap: 60px; }
+  .promise-marquee .star { color: rgba(255,255,255,.5); font-size: 18px; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ───────── PROCESS ───────── */
+  .process { padding: 110px 0; background: var(--paper); }
+  .step-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    margin-top: 56px;
+  }
+  .step {
+    position: relative; padding: 28px 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--cream);
+  }
+  .step .step-n {
+    font-family: 'DM Serif Display'; color: var(--orange);
+    font-size: 56px; line-height: 1; opacity: .9;
+  }
+  .step h4 { font-size: 17px; margin: 14px 0 6px; }
+  .step p { font-size: 14px; color: var(--muted); margin: 0; }
+
+  /* ───────── TRUST / TESTIMONIAL ───────── */
+  .trust { padding: 110px 0; }
+  .trust-row {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px;
+    align-items: stretch;
+  }
+  .quote-card {
+    background: var(--cream-2);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 48px;
+    position: relative;
+  }
+  .quote-card .qmark {
+    font-family: 'DM Serif Display'; font-size: 110px; line-height: .6;
+    color: var(--orange); position: absolute; top: 30px; left: 30px; opacity: .35;
+  }
+  .quote-card blockquote {
+    font-family: 'DM Serif Display'; font-size: 28px; line-height: 1.25;
+    margin: 30px 0 30px; padding: 0; position: relative;
+  }
+  .quote-card .who {
+    display: flex; align-items: center; gap: 14px; margin-top: 24px;
+  }
+  .avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--orange-soft); border: 1.5px solid var(--orange);
+    display: grid; place-items: center; color: var(--orange); font-weight: 700;
+  }
+  .who-name { font-weight: 700; }
+  .who-loc { color: var(--muted); font-size: 13px; }
+
+  .stats-stack { display: flex; flex-direction: column; gap: 16px; }
+  .stat-card {
+    background: var(--paper); border: 1px solid var(--line);
+    padding: 28px 32px; border-radius: 18px;
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  }
+  .stat-card .v {
+    font-family: 'DM Serif Display'; font-size: 56px; line-height: 1; color: var(--orange);
+  }
+  .stat-card .l { font-size: 14px; color: var(--muted); max-width: 200px; text-align: right; }
+
+  /* ───────── PRICING ───────── */
+  .pricing { padding: 110px 0; background: var(--paper); }
+  .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+  .price-card {
+    background: var(--cream); border: 1px solid var(--line); border-radius: 18px;
+    padding: 36px 32px;
+  }
+  .price-card.feature {
+    background: var(--ink); color: var(--cream); border-color: var(--ink); position: relative;
+  }
+  .price-card.feature::before {
+    content: "Most popular"; position: absolute; top: -12px; right: 24px;
+    background: var(--orange); color: #fff; padding: 5px 12px;
+    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    border-radius: 999px;
+  }
+  .price-card h4 { margin: 0 0 6px; font-size: 14px; letter-spacing: .15em; text-transform: uppercase; color: var(--orange); }
+  .price-card .amount { font-family: 'DM Serif Display'; font-size: 56px; line-height: 1; margin: 12px 0 6px; }
+  .price-card .amount small { font-family: 'Manrope'; font-size: 14px; color: var(--muted); font-weight: 500; }
+  .price-card.feature .amount small { color: rgba(251,245,235,.6); }
+  .price-card .desc { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .price-card.feature .desc { color: rgba(251,245,235,.7); }
+  .price-card ul { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; }
+  .price-card li { font-size: 14px; display: flex; gap: 10px; align-items: flex-start; }
+  .price-card li::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--orange); flex-shrink: 0; margin-top: 8px;
+  }
+  .price-card .sub-cta {
+    display: block; text-align: center; padding: 13px;
+    border: 1.5px solid var(--ink); border-radius: 999px;
+    font-weight: 700; font-size: 14px;
+  }
+  .price-card.feature .sub-cta { border-color: var(--orange); background: var(--orange); color: #fff; }
+  .price-card .sub-cta:hover { background: var(--ink); color: var(--cream); }
+  .price-card.feature .sub-cta:hover { background: var(--orange-deep); border-color: var(--orange-deep); }
+
+  /* ───────── AREAS ───────── */
+  .areas { padding: 110px 0; }
+  .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .area-list {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 12px 24px;
+    margin-top: 32px;
+  }
+  .area-list a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--paper); font-size: 14px; font-weight: 500;
+  }
+  .area-list a:hover { border-color: var(--orange); color: var(--orange); }
+  .area-list a .pin { width: 18px; height: 18px; color: var(--orange); }
+
+  .map-card {
+    background: var(--cream-2); border: 1.5px solid var(--orange);
+    border-radius: 24px; aspect-ratio: 4/3; position: relative; overflow: hidden;
+    background-image:
+      linear-gradient(var(--orange-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--orange-soft) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .map-pin {
+    position: absolute; transform: translate(-50%, -100%);
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+  }
+  .map-pin .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--orange); border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
+  }
+  .map-pin .lbl {
+    font-size: 11px; font-weight: 700; background: #fff; padding: 3px 8px;
+    border-radius: 4px; border: 1px solid var(--line); white-space: nowrap;
+    margin-bottom: 6px;
+  }
+  .map-route {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+
+  /* ───────── CTA ───────── */
+  .cta { padding: 90px 0 110px; }
+  .cta-card {
+    background: var(--ink); color: var(--cream);
+    border-radius: 32px; padding: 72px;
+    display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px;
+    align-items: center; position: relative; overflow: hidden;
+  }
+  .cta-card::before {
+    content: ""; position: absolute;
+    width: 360px; height: 360px; border-radius: 50%;
+    background: var(--orange); opacity: .15;
+    right: -100px; bottom: -120px;
+  }
+  .cta-card h2 {
+    font-family: 'DM Serif Display'; font-size: clamp(36px,4vw,54px); line-height: 1.05;
+    margin: 0 0 18px; letter-spacing: -0.01em;
+  }
+  .cta-card h2 em { color: var(--orange); font-style: italic; }
+  .cta-card p { color: rgba(251,245,235,.7); margin: 0 0 32px; font-size: 16px; max-width: 460px; }
+  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .cta-tel {
+    background: var(--cream); color: var(--ink); padding: 16px 26px;
+    border-radius: 999px; font-weight: 700; display: inline-flex; gap: 10px; align-items: center;
+  }
+  .cta-mail {
+    border: 1.5px solid var(--cream); color: var(--cream); padding: 16px 24px;
+    border-radius: 999px; font-weight: 600; display: inline-flex; gap: 10px; align-items: center;
+  }
+  .cta-mail:hover { background: var(--cream); color: var(--ink); }
+
+  .cta-card .right {
+    background: var(--cream); color: var(--ink); border-radius: 18px;
+    padding: 28px; position: relative; z-index: 2;
+  }
+  .cta-card .right h5 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin: 0 0 10px; font-weight: 800; }
+  .cta-card .hours { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 14px; }
+  .cta-card .hours li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .cta-card .hours li:last-child { border-bottom: 0; }
+  .cta-card .hours b { color: var(--ink); font-weight: 700; }
+
+  /* ───────── FOOTER ───────── */
+  footer {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: 60px 0 32px;
+  }
+  .foot-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+    margin-bottom: 40px;
+  }
+  .foot-grid h6 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; font-weight: 700; }
+  .foot-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+  .foot-grid a:hover { color: var(--orange); }
+  .foot-tag { color: var(--muted); font-size: 14px; margin: 14px 0 0; max-width: 320px; }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 13px;
+  }
+  .foot-bottom .tag { font-family: 'DM Serif Display'; color: var(--ink); font-style: italic; font-size: 16px; }
+
+  /* utility icon */
+  .ico { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .ico-lg { width: 28px; height: 28px; }
+
+  @media (max-width: 900px) {
+    .hero-grid, .section-head, .trust-row, .areas-grid, .cta-card, .foot-grid { grid-template-columns: 1fr; }
+    .pillar-grid, .service-grid, .step-grid, .price-grid { grid-template-columns: 1fr; }
+    .pillar { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 0; }
+    .nav-links { display: none; }
+    .cta-card { padding: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────── NAV ─────────── -->
+<nav class="nav">
+  <div class="container nav-row">
+    <a class="logo" href="#">
+      <div class="logo-mark">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#E8501F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- pitched roof -->
+          <path d="M6 22 L24 6 L42 22"/>
+          <!-- chimney -->
+          <path d="M34 11 V16"/>
+          <!-- house body -->
+          <path d="M9 20 V40 H39 V20"/>
+          <!-- laptop screen -->
+          <rect x="14" y="24" width="14" height="9" rx="0.8"/>
+          <!-- laptop base -->
+          <path d="M12 35 H30"/>
+          <!-- person head -->
+          <circle cx="33" cy="27" r="2.6"/>
+          <!-- person shoulders -->
+          <path d="M29.5 34 Q33 30 36.5 34"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="logo-word">Tech<span class="o">Neighbour</span></div>
+        <div class="logo-sub">IT SOLUTIONS</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:01234567890">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      01234 567890
+    </a>
+  </div>
+</nav>
+
+<!-- ─────────── HERO ─────────── -->
+<header class="hero">
+  <svg class="horizon" viewBox="0 0 1400 180" preserveAspectRatio="none">
+    <g stroke="#E8501F" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".7">
+      <path d="M0 130 Q 200 90, 400 110 T 800 100 T 1200 115 T 1400 100"/>
+      <path d="M0 150 Q 250 120, 500 140 T 1000 130 T 1400 140"/>
+      <!-- tiny houses -->
+      <g transform="translate(180 110)"><path d="M0 0 L10 -10 L20 0 M2 0 V18 H18 V0"/></g>
+      <g transform="translate(220 115)"><path d="M0 0 L8 -8 L16 0 M1 0 V14 H15 V0"/></g>
+      <g transform="translate(1100 118)"><path d="M0 0 L12 -12 L24 0 M2 0 V20 H22 V0 M10 8 H14 V20"/></g>
+      <!-- fence -->
+      <g transform="translate(60 145)">
+        <path d="M0 0 H160"/>
+        <path d="M0 -8 V12 M20 -8 V12 M40 -8 V12 M60 -8 V12 M80 -8 V12 M100 -8 V12 M120 -8 V12 M140 -8 V12 M160 -8 V12"/>
+      </g>
+      <g transform="translate(1180 150)">
+        <path d="M0 0 H180"/>
+        <path d="M0 -8 V10 M22 -8 V10 M44 -8 V10 M66 -8 V10 M88 -8 V10 M110 -8 V10 M132 -8 V10 M154 -8 V10 M176 -8 V10"/>
+      </g>
+      <!-- trees -->
+      <g transform="translate(420 100)"><circle cx="0" cy="0" r="14"/><path d="M0 14 V32"/></g>
+      <g transform="translate(960 105)"><circle cx="0" cy="0" r="10"/><path d="M0 10 V26"/></g>
+    </g>
+  </svg>
+
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Local IT support · Ashford & surrounds</span>
+      <h1>Big-city IT support,<br/>right on your <em>doorstep.</em></h1>
+      <p class="lede">From a Wi-Fi blackspot in the back bedroom to a small office network that won't behave — we'll handle it, so you don't have to. Friendly, plain-English help from someone in your own village.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Book a free diagnosis
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#services" class="btn-ghost">See what we fix</a>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><b>7 days</b><span>Available all week</span></div>
+        <div class="m"><b>Same day</b><span>Response in most cases</span></div>
+        <div class="m"><b>7 days</b><span>Available all week</span></div>
+      </div>
+    </div>
+
+    <div class="hero-scene">
+      <div class="hero-disc">
+        <div class="hero-house">
+          <svg viewBox="0 0 240 220" fill="none" stroke="#E8501F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <!-- chimney (sits on right side of roof, extends down to roof slope) -->
+            <path d="M168 79 V50 H182 V67"/>
+            <!-- pitched roof -->
+            <path d="M36 110 L120 38 L204 110"/>
+            <!-- attic 4-pane window in gable -->
+            <rect x="108" y="74" width="24" height="24" rx="1"/>
+            <line x1="120" y1="74" x2="120" y2="98"/>
+            <line x1="108" y1="86" x2="132" y2="86"/>
+            <!-- house body -->
+            <path d="M50 106 V184 H190 V106"/>
+            <!-- ground line -->
+            <path d="M28 184 H212"/>
+            <!-- laptop screen (sits in front of house) -->
+            <rect x="68" y="122" width="74" height="48" rx="2"/>
+            <!-- laptop base -->
+            <path d="M60 176 H150"/>
+            <!-- person head -->
+            <circle cx="162" cy="138" r="10"/>
+            <!-- person shoulders -->
+            <path d="M148 170 Q162 152 176 170"/>
+          </svg>
+        </div>
+      </div>
+      <div class="free-badge">
+        <div>
+          <div class="big">FREE</div>
+          <div class="small">Remote diagnosis on your first call</div>
+        </div>
+      </div>
+      <div class="shield-badge">
+        <svg class="shield-svg" viewBox="0 0 130 150" fill="#fff" stroke="#E8501F" stroke-width="2.5" stroke-linejoin="round">
+          <path d="M10 12 Q 10 8 14 8 H 116 Q 120 8 120 12 V 78 Q 120 110 65 142 Q 10 110 10 78 Z"/>
+        </svg>
+        <div class="t">NO FIX,<br/>NO FEE</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ─────────── PILLARS ─────────── -->
+<section class="pillars">
+  <div class="container pillar-grid">
+    <div class="pillar">
+      <div class="pillar-icon">
+        <svg class="ico ico-lg" viewBox="0 0 24 24"><path d="M3 12 L12 4 L21 12 M5 10 V20 H19 V10"/><rect x="10" y="13" width="4" height="7"/></svg>
+      </div>
+      <h3>For Home</h3>
+      <p>Family laptops, smart TVs, printers, broadband headaches — sorted in your living room over a cuppa.</p>
+      <a class="more" href="#services">Home help <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">
+        <svg class="ico ico-lg" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7 V5 a2 2 0 0 1 2 -2 h2 a2 2 0 0 1 2 2 v2"/><path d="M3 13 H21"/></svg>
+      </div>
+      <h3>For Business</h3>
+      <p>Reliable IT for shops, studios and home offices — networks, backups, Microsoft 365 and someone to call when it matters.</p>
+      <a class="more" href="#services">Business help <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">
+        <svg class="ico ico-lg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21 q8 -8 16 0"/></svg>
+      </div>
+      <h3>For You</h3>
+      <p>Lessons, advice and patient help — from setting up an iPad to safely shopping online. No jargon, ever.</p>
+      <a class="more" href="#services">Personal help <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── SERVICES ─────────── -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> What we fix</span>
+        <h2>Everyday tech, <em>handled</em>.</h2>
+      </div>
+      <p>Most jobs are done same-day. If we can't fix it remotely, we'll come round — Ashford to Wye, no call-out fees inside our area.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service"><div class="num">01</div><div><h4>Slow or broken computers fixed</h4><p>Diagnostics, repairs, SSD upgrades and tune-ups for Windows and Mac.</p></div></div>
+      <div class="service"><div class="num">02</div><div><h4>Wi-Fi setup and network problems</h4><p>Blackspot fixes, mesh systems, router setups, full-coverage installs.</p></div></div>
+      <div class="service"><div class="num">03</div><div><h4>Virus removal and security</h4><p>Malware removal, scam clean-ups, password managers, peace of mind.</p></div></div>
+      <div class="service"><div class="num">04</div><div><h4>New device setup and data transfer</h4><p>Out-of-box to fully configured: laptops, phones, printers, smart home.</p></div></div>
+      <div class="service"><div class="num">05</div><div><h4>On-site visits — we come to you</h4><p>House calls across Ashford and the Kent villages, no call-out fee.</p></div></div>
+      <div class="service"><div class="num">06</div><div><h4>Plain English — no jargon, ever</h4><p>Patient explanations, written notes, and follow-up support included.</p></div></div>
+      <div class="service"><div class="num">07</div><div><h4>Email & Microsoft 365</h4><p>Custom domains, shared mailboxes, Outlook, Teams, OneDrive.</p></div></div>
+      <div class="service"><div class="num">08</div><div><h4>Lessons & 1-to-1 help</h4><p>Patient, plain-English sessions in your home — at your pace.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PROMISE BAR ─────────── -->
+<section class="promise" aria-hidden="true">
+  <div class="promise-marquee">
+    <span>We'll handle it, so you don't have to. <span class="star">✦</span> No fix, no fee. <span class="star">✦</span> Plain English — no jargon, ever. <span class="star">✦</span> No job too small. <span class="star">✦</span> Local. Friendly. Reliable. <span class="star">✦</span></span>
+    <span>We'll handle it, so you don't have to. <span class="star">✦</span> No fix, no fee. <span class="star">✦</span> Plain English — no jargon, ever. <span class="star">✦</span> No job too small. <span class="star">✦</span> Local. Friendly. Reliable. <span class="star">✦</span></span>
+  </div>
+</section>
+
+<!-- ─────────── PROCESS ─────────── -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> How it works</span>
+        <h2>Four steps,<br/>then it's <em>working</em>.</h2>
+      </div>
+      <p>You'll always speak to the same person from start to finish. No call centres, no scripts, no surprise charges.</p>
+    </div>
+
+    <div class="step-grid">
+      <div class="step"><div class="step-n">01</div><h4>Tell us what's wrong</h4><p>Call, text or email. A quick chat is usually enough to know what's needed.</p></div>
+      <div class="step"><div class="step-n">02</div><h4>Free remote diagnosis</h4><p>We'll check what we can over the phone or screen-share — at no charge.</p></div>
+      <div class="step"><div class="step-n">03</div><h4>Fix in your home</h4><p>If we need to come round, we book a slot that suits — usually same week.</p></div>
+      <div class="step"><div class="step-n">04</div><h4>Pay only if it's fixed</h4><p>If we can't sort it, you don't pay a penny. Simple as that.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── TRUST ─────────── -->
+<section class="trust">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Why neighbours choose us</span>
+        <h2>Trusted on the <em>doorstep</em>.</h2>
+      </div>
+      <p>We're not a call centre. We're the person you'll wave to in the village shop on Saturday morning.</p>
+    </div>
+    <div class="trust-row">
+      <div class="quote-card">
+        <div class="qmark">"</div>
+        <blockquote>Satisfaction guaranteed. No job too small, available 7 days a week — and you'll always speak to the same person.</blockquote>
+        <div class="who">
+          <div class="avatar">TN</div>
+          <div>
+            <div class="who-name">Our promise to you</div>
+            <div class="who-loc">Local. Friendly. Reliable.</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-stack">
+        <div class="stat-card"><div class="v">Free</div><div class="l">Remote diagnosis on every first call — no charge</div></div>
+        <div class="stat-card"><div class="v">7 days</div><div class="l">Available Monday to Sunday, including weekends</div></div>
+        <div class="stat-card"><div class="v">1 person</div><div class="l">You'll always speak to the same person, every time</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PRICING ─────────── -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Honest pricing</span>
+        <h2>No surprises, <em>ever</em>.</h2>
+      </div>
+      <p>Most jobs are charged at a flat rate so you know exactly what you'll pay. Quotes given upfront, written down, sent by email.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h4>Quick Fix</h4>
+        <div class="amount">£35<small> / 30 min</small></div>
+        <p class="desc">Smaller jobs done remotely or in a single quick visit.</p>
+        <ul>
+          <li>Printer / email setup</li>
+          <li>Password recovery</li>
+          <li>Software install</li>
+          <li>Phone & tablet sync</li>
+        </ul>
+        <a class="sub-cta" href="#contact">Book a quick fix</a>
+      </div>
+      <div class="price-card feature">
+        <h4>House Call</h4>
+        <div class="amount">£65<small> / hour</small></div>
+        <p class="desc">Our most-loved option — we come to you, no call-out fee.</p>
+        <ul>
+          <li>Anything from the services list</li>
+          <li>Wi-Fi & full network audit</li>
+          <li>Lessons & 1-to-1 help</li>
+          <li>Free follow-up phone support</li>
+        </ul>
+        <a class="sub-cta" href="#contact">Book a visit</a>
+      </div>
+      <div class="price-card">
+        <h4>Business Care</h4>
+        <div class="amount">From £120<small> / month</small></div>
+        <p class="desc">A friendly IT department for small teams of up to 10.</p>
+        <ul>
+          <li>Monitoring & backups</li>
+          <li>Priority response</li>
+          <li>Microsoft 365 management</li>
+          <li>Quarterly on-site review</li>
+        </ul>
+        <a class="sub-cta" href="#contact">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── AREAS ─────────── -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="areas-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Local & nearby</span>
+        <h2 class="serif" style="font-size:clamp(38px,4vw,56px); line-height:1.05; margin:12px 0 20px;">A short drive,<br/>not a long wait.</h2>
+        <p style="color:var(--muted); max-width:480px;">We cover Ashford and the surrounding villages. If you're a little further out, give us a ring — we'll usually still come.</p>
+        <div class="area-list">
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Ashford</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Egerton</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Charing</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Wye</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Pluckley</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Lenham</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Headcorn</a>
+          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Bethersden</a>
+        </div>
+      </div>
+      <div class="map-card">
+        <svg class="map-route" viewBox="0 0 400 300" preserveAspectRatio="none">
+          <g stroke="#E8501F" fill="none" stroke-width="1.5" stroke-dasharray="4 4" opacity=".6">
+            <path d="M50 220 Q 130 90, 220 150 T 360 80"/>
+            <path d="M80 250 Q 200 200, 320 220"/>
+          </g>
+        </svg>
+        <div class="map-pin" style="left: 35%; top: 55%;"><div class="lbl">Ashford</div><div class="dot"></div></div>
+        <div class="map-pin" style="left: 18%; top: 32%;"><div class="lbl">Egerton</div><div class="dot"></div></div>
+        <div class="map-pin" style="left: 28%; top: 42%;"><div class="lbl">Charing</div><div class="dot"></div></div>
+        <div class="map-pin" style="left: 58%; top: 48%;"><div class="lbl">Wye</div><div class="dot"></div></div>
+        <div class="map-pin" style="left: 76%; top: 30%;"><div class="lbl">Headcorn</div><div class="dot"></div></div>
+        <div class="map-pin" style="left: 47%; top: 72%;"><div class="lbl">Bethersden</div><div class="dot"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CTA ─────────── -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="cta-card">
+      <div>
+        <span class="eyebrow" style="color:var(--orange)"><span class="dot"></span> Get in touch</span>
+        <h2 style="margin-top:14px;">Got something playing up?<br/><em>Let's sort it.</em></h2>
+        <p>Pop us a call, send a text, or drop a line — we usually reply within an hour during the day. The first remote diagnosis is on us.</p>
+        <div class="cta-actions">
+          <a class="cta-tel" href="tel:01234567890">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            01234 567890
+          </a>
+          <a class="cta-mail" href="/cdn-cgi/l/email-protection#a8c0cdc4c4c7e8dccdcbc0c6cdc1cfc0cac7ddda86cbc786ddc3">
+            <svg class="ico" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            <span class="__cf_email__" data-cfemail="b8d0ddd4d4d7f8ccdddbd0d6ddd1dfd0dad7cdca96dbd796cdd3">[email&#160;protected]</span>
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <h5>Opening hours</h5>
+        <ul class="hours">
+          <li><span>Mon — Fri</span><b>8am — 8pm</b></li>
+          <li><span>Saturday</span><b>9am — 6pm</b></li>
+          <li><span>Sunday</span><b>10am — 4pm</b></li>
+          <li><span>Emergencies</span><b>By arrangement</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#">
+          <div class="logo-mark">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#E8501F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 22 L24 6 L42 22"/>
+              <path d="M34 11 V16"/>
+              <path d="M9 20 V40 H39 V20"/>
+              <rect x="14" y="24" width="14" height="9" rx="0.8"/>
+              <path d="M12 35 H30"/>
+              <circle cx="33" cy="27" r="2.6"/>
+              <path d="M29.5 34 Q33 30 36.5 34"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <div class="logo-word">Tech<span class="o">Neighbour</span></div>
+            <div class="logo-sub">IT SOLUTIONS</div>
+          </div>
+        </a>
+        <p class="foot-tag">Big-city IT support, right on your doorstep. Serving Ashford and the Kent villages since 2019.</p>
+      </div>
+      <div>
+        <h6>Services</h6>
+        <ul>
+          <li><a href="#services">For Home</a></li>
+          <li><a href="#services">For Business</a></li>
+          <li><a href="#services">For You</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Company</h6>
+        <ul>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#areas">Areas covered</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="tel:01234567890">01234 567890</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#5f373a3333301f2b3a3c37313a3638373d302a2d713c30712a34"><span class="__cf_email__" data-cfemail="93fbf6fffffcd3e7f6f0fbfdf6faf4fbf1fce6e1bdf0fcbde6f8">[email&#160;protected]</span></a></li>
+          <li><a href="#">/techneighbourits</a></li>
+          <li><a href="#">www.techneighbour.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 TechNeighbour IT Solutions Ltd. All rights reserved.</span>
+      <span class="tag">Local. Friendly. Reliable.</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
