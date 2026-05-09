@@ -20,8 +20,8 @@
     --orange: #E8501F;
     --orange-deep: #C13F12;
     --orange-soft: #F8DCCB;
-    --ink: #1C1814;
-    --muted: #76695A;
+    --ink: #0F0B08;
+    --muted: #3A2D22;
     --line: #E5D7BF;
   }
   * { box-sizing: border-box; }
@@ -31,7 +31,8 @@
     background: var(--cream);
     color: var(--ink);
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-weight: 500;
   }
   .serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
   .mono-cap { font-family: 'Manrope', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; }
@@ -103,9 +104,9 @@
     margin: 22px 0 24px;
     letter-spacing: -0.015em;
   }
-  .hero h1 em { font-style: italic; color: var(--orange); }
+  .hero h1 em { font-style: italic; color: var(--orange-deep); }
   .hero p.lede {
-    font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 36px;
+    font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 36px; font-weight: 500;
   }
   .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
   .btn-primary {
@@ -256,7 +257,7 @@
     display: grid; place-items: center;
     margin-top: 2px;
   }
-  .service h4 { font-size: 18px; margin: 0 0 8px; font-weight: 700; }
+  .service h4 { font-size: 18px; margin: 0 0 8px; font-weight: 800; }
   .service p { color: var(--muted); font-size: 14.5px; margin: 0; }
 
   /* ───────── PROMISE BAR ───────── */
@@ -339,7 +340,7 @@
   .stat-card .v {
     font-family: 'DM Serif Display'; font-size: 56px; line-height: 1; color: var(--orange);
   }
-  .stat-card .l { font-size: 14px; color: var(--muted); max-width: 200px; text-align: right; }
+  .stat-card .l { font-size: 14px; color: var(--muted); max-width: 200px; text-align: right; font-weight: 600; }
 
   /* ───────── PRICING ───────── */
   .pricing { padding: 110px 0; background: var(--paper); }
@@ -565,7 +566,7 @@
   <div class="container hero-grid">
     <div>
       <span class="eyebrow"><span class="dot"></span> Local IT support · Matlock &amp; Derbyshire DE4</span>
-      <h1>Big-city IT solutions,<br/>right on your <em>doorstep.</em></h1>
+      <h1>Big-city IT support,<br/>right on your <em>doorstep.</em></h1>
       <p class="lede">From a Wi-Fi blackspot in the back bedroom to a Peak District business network that won't behave — I'll handle it, so you don't have to. Friendly, plain-English help from someone right here in Matlock.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">
@@ -584,26 +585,17 @@
     <div class="hero-scene">
       <div class="hero-disc">
         <div class="hero-house">
-          <svg viewBox="0 0 240 220" fill="none" stroke="#E8501F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <!-- chimney (sits on right side of roof, extends down to roof slope) -->
+                                        <svg viewBox="0 0 240 220" fill="none" stroke="#E8501F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M168 79 V50 H182 V67"/>
-            <!-- pitched roof -->
             <path d="M36 110 L120 38 L204 110"/>
-            <!-- attic 4-pane window in gable -->
             <rect x="108" y="74" width="24" height="24" rx="1"/>
             <line x1="120" y1="74" x2="120" y2="98"/>
             <line x1="108" y1="86" x2="132" y2="86"/>
-            <!-- house body -->
             <path d="M50 106 V184 H190 V106"/>
-            <!-- ground line -->
             <path d="M28 184 H212"/>
-            <!-- laptop screen (sits in front of house) -->
             <rect x="68" y="122" width="74" height="48" rx="2"/>
-            <!-- laptop base -->
             <path d="M60 176 H150"/>
-            <!-- person head -->
             <circle cx="162" cy="138" r="10"/>
-            <!-- person shoulders -->
             <path d="M148 170 Q162 152 176 170"/>
           </svg>
         </div>
@@ -878,7 +870,7 @@
             <div class="logo-sub">IT SOLUTIONS</div>
           </div>
         </a>
-        <p class="foot-tag">Big-city IT solutions, right on your doorstep. Serving Matlock and the Derbyshire DE4 area.</p>
+        <p class="foot-tag">Big-city IT support, right on your doorstep. Serving Matlock and the Derbyshire DE4 area.</p>
       </div>
       <div>
         <h6>Services</h6>
