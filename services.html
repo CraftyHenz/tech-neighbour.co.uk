@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — TechNeighbour IT Support Matlock & Derbyshire DE4</title>
+<meta name="description" content="Full list of IT services for homes and businesses in Matlock and the DE4 area. Computer repair, Wi-Fi, virus removal, Microsoft 365 and more. No fix, no fee." />
+<meta property="og:title" content="Services — TechNeighbour IT Support" />
+<meta property="og:description" content="Everything I fix and set up — from slow computers to full business IT support. Serving Matlock and the Derbyshire DE4 area." />
+<meta property="og:url" content="https://tech-neighbour.co.uk/services.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF5EB;
+    --cream-2: #F5EBD8;
+    --paper: #FFFCF6;
+    --orange: #E8501F;
+    --orange-deep: #C13F12;
+    --orange-soft: #F8DCCB;
+    --ink: #0F0B08;
+    --muted: #3A2D22;
+    --line: #E5D7BF;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  .serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,245,235,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark { width: 46px; height: 46px; display: grid; place-items: center; flex-shrink: 0; }
+  .logo-mark svg { width: 100%; height: 100%; display: block; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; gap: 5px; }
+  .logo-word { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; line-height: 1; }
+  .logo-word .o { color: var(--orange); }
+  .logo-sub { font-size: 9.5px; letter-spacing: 0.32em; color: var(--muted); font-weight: 700; line-height: 1; display: flex; align-items: center; gap: 8px; }
+  .logo-sub::before, .logo-sub::after { content: ""; flex: 1; height: 1px; background: var(--line); min-width: 14px; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { font-weight: 500; font-size: 15px; color: var(--ink); }
+  .nav-links a:hover, .nav-links a.active { color: var(--orange); }
+  .nav-cta { background: var(--orange); color: white; padding: 11px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; display: inline-flex; gap: 8px; align-items: center; transition: background .15s; }
+  .nav-cta:hover { background: var(--orange-deep); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 72px 0 60px;
+    border-bottom: 1px solid var(--line);
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 100% 50%, rgba(232,80,31,0.06), transparent);
+    pointer-events: none;
+  }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--orange); font-weight: 700; font-size: 12.5px; letter-spacing: 0.22em; text-transform: uppercase; }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+  .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(42px, 5.5vw, 72px); line-height: 1.02; margin: 18px 0 20px; letter-spacing: -0.015em; }
+  .page-hero h1 em { font-style: italic; color: var(--orange-deep); }
+  .page-hero p { font-size: 19px; color: var(--muted); max-width: 580px; margin: 0; font-weight: 500; }
+  .page-hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+  .guarantee-pills { display: flex; flex-direction: column; gap: 14px; }
+  .g-pill { display: flex; align-items: center; gap: 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
+  .g-pill-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--orange-soft); display: grid; place-items: center; color: var(--orange); flex-shrink: 0; }
+  .g-pill strong { display: block; font-size: 15px; font-weight: 800; color: var(--ink); }
+  .g-pill span { font-size: 13px; color: var(--muted); }
+
+  /* ── PROMISE BAR ── */
+  .promise { background: var(--orange); color: #fff; padding: 22px 0; overflow: hidden; }
+  .promise-marquee { display: flex; gap: 60px; font-family: 'DM Serif Display'; font-size: 24px; font-style: italic; white-space: nowrap; animation: scroll 32s linear infinite; }
+  .promise-marquee span { display: inline-flex; align-items: center; gap: 60px; }
+  .promise-marquee .star { color: rgba(255,255,255,.5); font-size: 16px; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── SERVICE ROWS ── */
+  .services-list { padding: 80px 0; }
+  .service-row {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px;
+    padding: 56px 0; border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .service-row:first-child { padding-top: 0; }
+  .service-row:last-child { border-bottom: none; }
+  .svc-num { font-family: 'DM Serif Display'; font-size: 13px; color: var(--orange); border: 1px solid var(--orange); border-radius: 50%; width: 32px; height: 32px; display: grid; place-items: center; margin-bottom: 18px; }
+  .svc-left h2 { font-family: 'DM Serif Display'; font-size: clamp(28px, 3vw, 38px); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.01em; }
+  .svc-left h2 em { font-style: italic; color: var(--orange-deep); }
+  .svc-left .blurb { font-size: 17px; color: var(--muted); margin: 0 0 24px; line-height: 1.65; font-weight: 500; }
+  .svc-price { display: inline-flex; align-items: center; gap: 10px; background: var(--orange-soft); border: 1px solid var(--orange); border-radius: 999px; padding: 8px 18px; font-size: 14px; font-weight: 800; color: var(--orange-deep); }
+  .svc-right { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 32px 36px; }
+  .svc-right h4 { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; font-weight: 700; }
+  .bullet-list { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 12px; }
+  .bullet-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--ink); font-weight: 500; }
+  .bullet-list li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); flex-shrink: 0; margin-top: 8px; }
+  .svc-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 14px; transition: background .15s; }
+  .svc-cta:hover { background: var(--orange-deep); }
+
+  /* ── BOTTOM CTA ── */
+  .cta { padding: 80px 0; }
+  .cta-card { background: var(--ink); color: var(--cream); border-radius: 32px; padding: 64px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; position: relative; overflow: hidden; }
+  .cta-card::before { content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: var(--orange); opacity: .15; right: -100px; bottom: -120px; }
+  .cta-card h2 { font-family: 'DM Serif Display'; font-size: clamp(32px, 3.5vw, 48px); line-height: 1.05; margin: 0 0 16px; }
+  .cta-card h2 em { color: var(--orange); font-style: italic; }
+  .cta-card p { color: rgba(251,245,235,.75); margin: 0 0 28px; font-size: 16px; }
+  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .cta-tel { background: var(--cream); color: var(--ink); padding: 15px 24px; border-radius: 999px; font-weight: 700; display: inline-flex; gap: 10px; align-items: center; }
+  .cta-mail { border: 1.5px solid rgba(251,245,235,.4); color: var(--cream); padding: 15px 22px; border-radius: 999px; font-weight: 600; display: inline-flex; gap: 10px; align-items: center; }
+  .cta-mail:hover { background: var(--cream); color: var(--ink); }
+  .cta-card .right { background: var(--cream); color: var(--ink); border-radius: 18px; padding: 28px; position: relative; z-index: 2; }
+  .cta-card .right h5 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin: 0 0 10px; font-weight: 800; }
+  .hours { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 14px; }
+  .hours li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .hours li:last-child { border-bottom: 0; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--paper); border-top: 1px solid var(--line); padding: 60px 0 32px; }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .foot-grid h6 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; font-weight: 700; }
+  .foot-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+  .foot-grid a:hover { color: var(--orange); }
+  .foot-tag { color: var(--muted); font-size: 14px; margin: 14px 0 0; max-width: 320px; }
+  .foot-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  .foot-bottom .tag { font-family: 'DM Serif Display'; color: var(--ink); font-style: italic; font-size: 16px; }
+
+  .ico { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+  @media (max-width: 900px) {
+    .page-hero-grid, .service-row, .cta-card, .foot-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .cta-card { padding: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-row">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#E8501F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 22 L24 6 L42 22"/>
+          <path d="M34 11 V16"/>
+          <path d="M9 20 V40 H39 V20"/>
+          <rect x="14" y="24" width="14" height="9" rx="0.8"/>
+          <path d="M12 35 H30"/>
+          <circle cx="33" cy="27" r="2.6"/>
+          <path d="M29.5 34 Q33 30 36.5 34"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="logo-word">Tech<span class="o">Neighbour</span></div>
+        <div class="logo-sub">IT SOLUTIONS</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="index.html#process">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:YOUR_NUMBER">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      07700 000000
+    </a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="container page-hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> What I do</span>
+      <h1>Everything I fix,<br/>in <em>plain English.</em></h1>
+      <p>All prices are guides — every job is different and I'll always give you a clear figure before anything starts. No surprise bills, no hidden extras.</p>
+    </div>
+    <div class="guarantee-pills">
+      <div class="g-pill">
+        <div class="g-pill-icon">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div><strong>No fix, no fee</strong><span>If I can't solve it, you don't pay a penny</span></div>
+      </div>
+      <div class="g-pill">
+        <div class="g-pill-icon">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div><strong>Free remote diagnosis</strong><span>First assessment is always on me</span></div>
+      </div>
+      <div class="g-pill">
+        <div class="g-pill-icon">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3 12 L12 4 L21 12 M5 10 V20 H19 V10"/></svg>
+        </div>
+        <div><strong>I come to you</strong><span>On-site visits across Matlock and DE4 — no call-out fee</span></div>
+      </div>
+      <div class="g-pill">
+        <div class="g-pill-icon">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21 q8 -8 16 0"/></svg>
+        </div>
+        <div><strong>One person, always</strong><span>You'll always speak to the same person</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PROMISE MARQUEE -->
+<div class="promise" aria-hidden="true">
+  <div class="promise-marquee">
+    <span>No fix, no fee. <span class="star">✦</span> Free remote diagnosis. <span class="star">✦</span> Plain English — no jargon, ever. <span class="star">✦</span> No job too small. <span class="star">✦</span> I come to you. <span class="star">✦</span></span>
+    <span>No fix, no fee. <span class="star">✦</span> Free remote diagnosis. <span class="star">✦</span> Plain English — no jargon, ever. <span class="star">✦</span> No job too small. <span class="star">✦</span> I come to you. <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- SERVICES LIST -->
+<section class="services-list">
+  <div class="container">
+
+    <!-- 01 Computer Repair -->
+    <div class="service-row" id="repair">
+      <div class="svc-left">
+        <div class="svc-num">01</div>
+        <h2>Computer <em>repair</em></h2>
+        <p class="blurb">Slow machine? Won't turn on? Keeps crashing? Most repairs are sorted same day or next — and I come to you. No need to box it up and post it somewhere.</p>
+        <div class="svc-price">From £60 · No fix, no fee</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Slow laptops and PCs diagnosed and fixed</li>
+          <li>Won't start, blue screen, or freezing — I'll find out why</li>
+          <li>Hardware faults — screens, keyboards, fans, hard drives</li>
+          <li>SSD upgrades to make old machines fast again</li>
+          <li>I come to your home or business — no need to travel</li>
+          <li>Honest advice if a repair isn't worth doing</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Book a repair <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 02 Wi-Fi -->
+    <div class="service-row" id="wifi">
+      <div class="svc-left">
+        <div class="svc-num">02</div>
+        <h2>Wi-Fi & <em>networking</em></h2>
+        <p class="blurb">Dead spots, dropped connections, or a whole new network from scratch. Rural properties with thick stone walls are no problem — I've sorted plenty across the DE4 area.</p>
+        <div class="svc-price">From £65 · Quoted per site</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Wi-Fi that reaches every room — including outbuildings and barns</li>
+          <li>Mesh systems for large or awkward properties</li>
+          <li>Router setup, replacement and configuration</li>
+          <li>Separate guest Wi-Fi for customers or visitors</li>
+          <li>Wired ethernet runs for offices and business premises</li>
+          <li>Site survey first so I know exactly what's needed</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Sort my Wi-Fi <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 03 Virus & Security -->
+    <div class="service-row" id="security">
+      <div class="svc-left">
+        <div class="svc-num">03</div>
+        <h2>Virus removal & <em>security</em></h2>
+        <p class="blurb">Viruses, ransomware, suspicious pop-ups, scam emails — I remove the problem, lock the door, and explain in plain English what happened and how to avoid it again.</p>
+        <div class="svc-price">From £55 · No fix, no fee</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Full system scan and virus/malware removal</li>
+          <li>Security software installed and set up properly</li>
+          <li>Passwords and accounts checked and secured</li>
+          <li>Scam email and phishing awareness — what to look for</li>
+          <li>Plain English explanation of what happened</li>
+          <li>Follow-up check included at no extra cost</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Remove a virus <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 04 New Device Setup -->
+    <div class="service-row" id="setup">
+      <div class="svc-left">
+        <div class="svc-num">04</div>
+        <h2>New device <em>setup</em></h2>
+        <p class="blurb">New laptop, PC, phone, tablet or printer — I'll set it up exactly how you need it so you can get straight to work or play. Same day, in your home.</p>
+        <div class="svc-price">From £65</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Out of the box and fully ready to use same day</li>
+          <li>All your software, accounts and settings transferred over</li>
+          <li>Printers, scanners and other devices connected</li>
+          <li>Old device wiped safely if you're replacing it</li>
+          <li>A quick walkthrough so you know where everything is</li>
+          <li>Follow-up phone support included free</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Set up my device <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 05 Data Backup -->
+    <div class="service-row" id="data">
+      <div class="svc-left">
+        <div class="svc-num">05</div>
+        <h2>Data backup & <em>recovery</em></h2>
+        <p class="blurb">Lost files? Corrupted drive? Or just want proper peace of mind that your photos and documents are safe? I recover what I can and make sure it can't happen again.</p>
+        <div class="svc-price">From £75</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Data recovery from failed or corrupted hard drives</li>
+          <li>Automatic daily backup set up to external drive or cloud</li>
+          <li>Transfer everything from old computer to new</li>
+          <li>Backup actually tested — restored, not just assumed to work</li>
+          <li>Ongoing backup monitoring available for businesses</li>
+          <li>Photos, documents, emails — nothing left behind</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Protect my data <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 06 Microsoft 365 -->
+    <div class="service-row" id="m365">
+      <div class="svc-left">
+        <div class="svc-num">06</div>
+        <h2>Email & <em>Microsoft 365</em></h2>
+        <p class="blurb">Proper email on your own domain, shared calendars, files you can reach from anywhere, and Teams for your team. Set up properly, first time.</p>
+        <div class="svc-price">From £120 setup · licences extra</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Email at yourname@yourbusiness.co.uk — looks professional</li>
+          <li>Outlook, Word, Excel set up on all your devices</li>
+          <li>Shared calendars and contacts for your whole team</li>
+          <li>OneDrive so files follow you between devices</li>
+          <li>Migration from old email — nothing gets left behind</li>
+          <li>Teams setup for video calls and chat</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Set up 365 <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 07 IT Support -->
+    <div class="service-row" id="support">
+      <div class="svc-left">
+        <div class="svc-num">07</div>
+        <h2>Ongoing IT <em>support</em></h2>
+        <p class="blurb">For businesses that want regular, reliable IT help without the cost of a full IT department. One phone number, one person, one monthly fee.</p>
+        <div class="svc-price">Pay-as-you-go £65/hr · Monthly from £85</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Priority response — you go to the top of the queue</li>
+          <li>Monthly check-ins to keep everything running smoothly</li>
+          <li>Remote support when I can, on-site when I can't</li>
+          <li>Same person every time — no call-centre runaround</li>
+          <li>Honest, no-contract arrangements — pay for what you need</li>
+          <li>Advice on upgrades, security and new equipment</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Talk about support <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 08 Hardware Upgrades -->
+    <div class="service-row" id="upgrades">
+      <div class="svc-left">
+        <div class="svc-num">08</div>
+        <h2>Hardware <em>upgrades</em></h2>
+        <p class="blurb">Before you spend £500 on a new laptop, let me look at your old one. Most slow machines can be made fast again for a fraction of the cost.</p>
+        <div class="svc-price">From £85 + parts</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>RAM upgrade — the cheapest big improvement you can make</li>
+          <li>SSD upgrade — old PCs feel brand new again</li>
+          <li>Battery replacement on most laptops</li>
+          <li>Fan cleaning and thermal paste — stops overheating</li>
+          <li>Honest assessment if it's genuinely not worth upgrading</li>
+          <li>Parts sourced and fitted — you don't need to do anything</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Upgrade my machine <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div>
+        <span class="eyebrow" style="color:var(--orange)"><span class="dot"></span> Get in touch</span>
+        <h2 style="margin-top:14px; color:var(--cream);">Not sure what<br/><em>you need?</em></h2>
+        <p>That's fine — most people aren't. Just tell me what's happening and I'll suggest the simplest fix. No pressure, no upsell, ever.</p>
+        <div class="cta-actions">
+          <a class="cta-tel" href="tel:YOUR_NUMBER">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            07700 000000
+          </a>
+          <a class="cta-mail" href="mailto:hello@tech-neighbour.co.uk">
+            <svg class="ico" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            hello@tech-neighbour.co.uk
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <h5>Opening hours</h5>
+        <ul class="hours">
+          <li><span>Mon — Fri</span><b>8am — 8pm</b></li>
+          <li><span>Saturday</span><b>9am — 6pm</b></li>
+          <li><span>Sunday</span><b>10am — 4pm</b></li>
+          <li><span>Emergencies</span><b>By arrangement</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html">
+          <div class="logo-mark">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#E8501F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 22 L24 6 L42 22"/>
+              <path d="M34 11 V16"/>
+              <path d="M9 20 V40 H39 V20"/>
+              <rect x="14" y="24" width="14" height="9" rx="0.8"/>
+              <path d="M12 35 H30"/>
+              <circle cx="33" cy="27" r="2.6"/>
+              <path d="M29.5 34 Q33 30 36.5 34"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <div class="logo-word">Tech<span class="o">Neighbour</span></div>
+            <div class="logo-sub">IT SOLUTIONS</div>
+          </div>
+        </a>
+        <p class="foot-tag">Big-city IT support, right on your doorstep. Serving Matlock and the Derbyshire DE4 area.</p>
+      </div>
+      <div>
+        <h6>Services</h6>
+        <ul>
+          <li><a href="#repair">Computer repair</a></li>
+          <li><a href="#wifi">Wi-Fi & networking</a></li>
+          <li><a href="#security">Virus removal</a></li>
+          <li><a href="#setup">New device setup</a></li>
+          <li><a href="#data">Data backup</a></li>
+          <li><a href="#m365">Microsoft 365</a></li>
+          <li><a href="#support">IT support</a></li>
+          <li><a href="#upgrades">Upgrades</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Company</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#process">How it works</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#areas">Areas covered</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="tel:YOUR_NUMBER">07700 000000</a></li>
+          <li><a href="mailto:hello@tech-neighbour.co.uk">hello@tech-neighbour.co.uk</a></li>
+          <li><a href="#">Facebook — coming soon</a></li>
+          <li><a href="https://tech-neighbour.co.uk">tech-neighbour.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 TechNeighbour IT Solutions. Matlock, Derbyshire.</span>
+      <span class="tag">Local. Friendly. Reliable.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
