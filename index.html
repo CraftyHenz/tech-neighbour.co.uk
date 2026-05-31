@@ -3,850 +3,592 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>TechNeighbour — Local IT Support in Matlock &amp; Derbyshire DE4</title>
-<meta name="description" content="Friendly local IT support for homes and small businesses in Matlock, Bakewell, Wirksworth and the DE4 area. No fix, no fee. Free remote diagnosis." />
-<meta property="og:title" content="TechNeighbour — Local IT Support in Matlock, Derbyshire" />
-<meta property="og:description" content="Friendly, plain-English IT support for homes and businesses across Matlock and the DE4 area. No fix, no fee." />
-<meta property="og:url" content="https://tech-neighbour.co.uk" />
-<meta property="og:type" content="website" />
+<title>Services · TechNeighbour IT Solutions, Matlock &amp; Derbyshire DE4</title>
+<meta name="description" content="Full list of IT solutions for homes and businesses in Matlock and the DE4 area. Computer repair, Wi-Fi, virus removal, Microsoft 365 and more. No fix, no fee." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream: #FBF5EB;
-    --cream-2: #F5EBD8;
-    --paper: #FFFCF6;
-    --orange: #E8501F;
-    --orange-deep: #C13F12;
-    --orange-soft: #F8DCCB;
-    --ink: #0F0B08;
-    --muted: #3A2D22;
-    --line: #E5D7BF;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: 'Manrope', system-ui, sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.6;
-    font-weight: 500;
-  }
-  .serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
-  .mono-cap { font-family: 'Manrope', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; }
-  a { color: inherit; text-decoration: none; }
-  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+:root {
+  --cream: #FBF5EB;
+  --cream-2: #F5EBD8;
+  --paper: #FFFCF6;
+  --orange: #E8501F;
+  --orange-deep: #C13F12;
+  --orange-soft: #F8DCCB;
+  --ink: #0F0B08;
+  --muted: #3A2D22;
+  --line: #E5D7BF;
+  --space: #08060A;
+  --ease-out: cubic-bezier(0.16,1,0.3,1);
+  --ease-std: cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;font-weight:500;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
 
-  /* ───────── NAV ───────── */
-  .nav {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(251,245,235,0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 0;
-  }
-  .logo { display: flex; align-items: center; gap: 12px; }
-  .logo-mark {
-    width: 46px; height: 46px;
-    display: grid; place-items: center;
-    flex-shrink: 0;
-  }
-  .logo-mark svg { width: 100%; height: 100%; display: block; }
-  .logo-text { display: flex; flex-direction: column; line-height: 1; gap: 5px; }
-  .logo-word { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; line-height: 1; }
-  .logo-word .o { color: var(--orange); }
-  .logo-sub {
-    font-size: 9.5px; letter-spacing: 0.32em; color: var(--muted);
-    font-weight: 700; line-height: 1;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .logo-sub::before, .logo-sub::after {
-    content: ""; flex: 1; height: 1px; background: var(--line); min-width: 14px;
-  }
+/* SCROLL REVEAL */
+.r{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+.r.in{opacity:1;transform:none}
+.r.d1{transition-delay:.08s}.r.d2{transition-delay:.16s}.r.d3{transition-delay:.24s}
 
-  .nav-links { display: flex; gap: 36px; align-items: center; }
-  .nav-links a { font-weight: 500; font-size: 15px; color: var(--ink); }
-  .nav-links a:hover { color: var(--orange); }
-  .nav-cta {
-    background: var(--orange); color: white;
-    padding: 11px 20px; border-radius: 999px;
-    font-weight: 700; font-size: 14px;
-    display: inline-flex; gap: 8px; align-items: center;
-    transition: background .15s;
-  }
-  .nav-cta:hover { background: var(--orange-deep); }
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(8,6,10,.92);backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.07);transition:border-color .3s}
+.nav.light{background:rgba(251,245,235,.93);border-bottom-color:var(--line)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0;transition:padding .3s var(--ease-std)}
+.logo{display:flex;align-items:center;gap:13px;cursor:pointer}
+.logo-mark{width:42px;height:42px;flex-shrink:0;transition:transform .3s var(--ease-out)}
+.logo:hover .logo-mark{transform:scale(1.07)}
+.logo-text{display:flex;flex-direction:column;gap:4px}
+.logo-name{font-family:'Fraunces',serif;font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1;color:#fff;transition:color .3s}
+.nav.light .logo-name{color:var(--ink)}
+.logo-name .o{color:var(--orange)}
+.logo-sub{font-size:8.5px;letter-spacing:.3em;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;line-height:1;transition:color .3s}
+.nav.light .logo-sub{color:var(--muted)}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{font-weight:600;font-size:14px;color:rgba(255,255,255,.7);padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nav.light .nav-links a{color:var(--ink)}
+.nav-links a:hover,.nav-links a.active{background:rgba(232,80,31,.15);color:var(--orange)}
+.nav.light .nav-links a:hover,.nav.light .nav-links a.active{background:var(--cream-2);color:var(--orange)}
+.nav-cta{background:var(--orange);color:#fff;padding:11px 22px;border-radius:999px;font-weight:700;font-size:14px;display:inline-flex;gap:8px;align-items:center;transition:background .2s,transform .15s;box-shadow:0 2px 12px rgba(232,80,31,.4)}
+.nav-cta:hover{background:var(--orange-deep);transform:translateY(-1px)}
+.nav-cta svg{transition:transform .2s}
+.nav-cta:hover svg{transform:translateX(2px)}
+.burger{display:none;width:40px;height:40px;border:none;background:none;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center;border-radius:8px;transition:background .2s}
+.burger:hover{background:rgba(255,255,255,.08)}
+.burger span{display:block;width:20px;height:1.5px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s,background .3s;transform-origin:center}
+.nav.light .burger span{background:var(--ink)}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-nav{display:none;position:fixed;inset:0;background:var(--space);z-index:99;padding:90px 32px 40px;flex-direction:column;gap:2px}
+.mob-nav.open{display:flex}
+.mob-nav a{font-family:'Fraunces',serif;font-size:34px;font-weight:600;color:rgba(255,255,255,.8);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);transition:color .2s,padding-left .2s}
+.mob-nav a:hover{color:var(--orange);padding-left:8px}
 
-  /* ───────── HERO ───────── */
-  .hero {
-    position: relative;
-    padding: 80px 0 110px;
-    overflow: hidden;
-  }
-  .hero-grid {
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;
-    position: relative; z-index: 2;
-  }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    color: var(--orange); font-weight: 700; font-size: 12.5px;
-    letter-spacing: 0.22em; text-transform: uppercase;
-  }
-  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
-  .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(48px, 6vw, 84px);
-    line-height: 1.02;
-    margin: 22px 0 24px;
-    letter-spacing: -0.015em;
-  }
-  .hero h1 em { font-style: italic; color: var(--orange-deep); }
-  .hero p.lede {
-    font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 36px; font-weight: 500;
-  }
-  .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--orange); color: #fff;
-    padding: 16px 26px; border-radius: 999px;
-    font-weight: 700; font-size: 15px;
-    display: inline-flex; gap: 10px; align-items: center;
-    box-shadow: 0 10px 24px -8px rgba(232,80,31,.45);
-    transition: transform .15s, box-shadow .15s;
-  }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -8px rgba(232,80,31,.55); }
-  .btn-ghost {
-    padding: 16px 22px; border-radius: 999px;
-    font-weight: 600; font-size: 15px;
-    border: 1.5px solid var(--ink);
-    display: inline-flex; gap: 10px; align-items: center;
-  }
-  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+/* ══════════════════════════════════════
+   COSMIC HERO
+══════════════════════════════════════ */
+.cosmic-hero{
+  position:relative;min-height:92vh;
+  background:var(--space);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  align-items:center;
+  padding:72px 32px 64px;
+}
 
-  .hero-meta {
-    display: flex; gap: 40px; margin-top: 48px; flex-wrap: wrap;
-  }
-  .hero-meta .m {
-    border-left: 1.5px solid var(--line); padding-left: 14px;
-  }
-  .hero-meta .m b { display: block; font-family: 'DM Serif Display'; font-size: 28px; line-height: 1; }
-  .hero-meta .m span { font-size: 12.5px; color: var(--muted); letter-spacing: 0.06em; }
+/* Nebula layers */
+.neb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(55px)}
+.neb-1{width:700px;height:500px;background:radial-gradient(ellipse,rgba(232,80,31,.22) 0%,rgba(193,63,18,.08) 50%,transparent 72%);top:-120px;right:-80px}
+.neb-2{width:550px;height:450px;background:radial-gradient(ellipse,rgba(248,130,80,.12) 0%,rgba(232,80,31,.04) 55%,transparent 72%);bottom:-60px;left:-60px}
+.neb-3{width:400px;height:400px;background:radial-gradient(circle,rgba(232,80,31,.1) 0%,transparent 65%);top:38%;left:44%;transform:translate(-50%,-50%)}
 
-  /* hero scene */
-  .hero-scene {
-    position: relative; width: 100%; aspect-ratio: 1/1; max-width: 520px; margin-left: auto;
-  }
-  .hero-disc {
-    position: absolute; inset: 0;
-    border-radius: 50%;
-    background: var(--cream-2);
-    border: 2px solid var(--orange);
-    background-image:
-      linear-gradient(var(--orange-soft) 1px, transparent 1px),
-      linear-gradient(90deg, var(--orange-soft) 1px, transparent 1px);
-    background-size: 28px 28px;
-    overflow: hidden;
-  }
-  .hero-disc::after {
-    content: ""; position: absolute; inset: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.5), transparent 50%);
-  }
-  .hero-house { position: absolute; inset: 0; display: grid; place-items: center; }
-  .hero-house svg { width: 60%; height: auto; }
+/* Orbit rings */
+.orb-ring{position:absolute;border-radius:50%;border:1px solid rgba(232,80,31,.07);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
 
-  .free-badge {
-    position: absolute; top: -10px; left: -20px;
-    width: 150px; height: 150px; border-radius: 50%;
-    background: var(--orange); color: #fff;
-    display: grid; place-items: center; text-align: center;
-    transform: rotate(-12deg);
-    box-shadow: 0 16px 30px -10px rgba(232,80,31,.55);
-    z-index: 3;
-  }
-  .free-badge .big { font-family: 'DM Serif Display'; font-size: 38px; line-height: 1; }
-  .free-badge .small { font-size: 9.5px; letter-spacing: 0.18em; font-weight: 700; line-height: 1.4; margin-top: 6px; padding: 0 14px; }
+/* Star (generated by JS) */
+.star{position:absolute;border-radius:50%;background:#fff;pointer-events:none}
+@keyframes twinkle{0%,100%{transform:scale(1)}50%{transform:scale(0.2);opacity:.04!important}}
 
-  .shield-badge {
-    position: absolute; top: 24px; right: -36px;
-    width: 130px; height: 150px;
-    transform: rotate(8deg);
-    z-index: 3;
-    filter: drop-shadow(0 14px 22px rgba(0,0,0,.12));
-  }
-  .shield-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .shield-badge .t {
-    position: absolute; inset: 0;
-    display: grid; place-items: center; text-align: center;
-    font-family: 'DM Serif Display'; font-size: 22px; line-height: 1.05;
-    color: var(--orange); padding: 28px 18px 36px;
-  }
+/* Cosmic title */
+.cosmic-title{
+  position:relative;z-index:10;
+  text-align:center;
+  margin-bottom:52px;
+  max-width:640px;
+}
+.c-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.c-eyebrow::before,.c-eyebrow::after{content:'';display:block;width:20px;height:1px;background:rgba(232,80,31,.5)}
+.cosmic-title h1{font-family:'Fraunces',serif;font-size:clamp(38px,5.5vw,68px);color:#fff;line-height:1;letter-spacing:-.025em;margin-bottom:16px;font-weight:300;font-optical-sizing:auto}
+.cosmic-title h1 em{color:var(--orange);font-style:italic;font-weight:400}
+.cosmic-title p{color:rgba(255,255,255,.38);font-size:13.5px;letter-spacing:.08em;font-weight:600;text-transform:uppercase}
 
-  /* hand-drawn horizon */
-  .horizon {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    height: 180px; opacity: .6; z-index: 1; pointer-events: none;
-  }
+/* Bubble cloud */
+.cosmic-cloud{
+  position:relative;
+  width:100%;max-width:1060px;
+  height:310px;
+}
 
-  /* ───────── PILLARS ───────── */
-  .pillars {
-    background: var(--paper);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    padding: 70px 0;
-  }
-  .pillar-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-  }
-  .pillar {
-    padding: 8px 36px;
-    border-right: 1px solid var(--line);
-    text-align: left;
-  }
-  .pillar:last-child { border-right: 0; }
-  .pillar-icon {
-    width: 56px; height: 56px; border-radius: 14px;
-    background: var(--orange-soft);
-    display: grid; place-items: center;
-    color: var(--orange);
-    margin-bottom: 22px;
-  }
-  .pillar h3 {
-    font-family: 'DM Serif Display'; font-size: 32px; margin: 0 0 8px;
-  }
-  .pillar p { color: var(--muted); margin: 0 0 18px; font-size: 15px; }
-  .pillar a.more {
-    color: var(--orange); font-weight: 700; font-size: 14px;
-    display: inline-flex; align-items: center; gap: 6px;
-  }
-  .pillar a.more:hover { gap: 10px; }
+/* Float animations — unique per bubble */
+@keyframes cf1{0%,100%{transform:translate(0,0)}35%{transform:translate(5px,-14px)}70%{transform:translate(-3px,-8px)}}
+@keyframes cf2{0%,100%{transform:translate(0,0)}40%{transform:translate(-8px,-16px)}72%{transform:translate(6px,-6px)}}
+@keyframes cf3{0%,100%{transform:translate(0,0)}30%{transform:translate(4px,-12px)}65%{transform:translate(-5px,-18px)}}
+@keyframes cf4{0%,100%{transform:translate(0,0)}45%{transform:translate(-6px,-13px)}80%{transform:translate(7px,-9px)}}
+@keyframes cf5{0%,100%{transform:translate(0,0)}25%{transform:translate(6px,-15px)}60%{transform:translate(-4px,-10px)}}
+@keyframes cf6{0%,100%{transform:translate(0,0)}50%{transform:translate(-7px,-14px)}85%{transform:translate(5px,-7px)}}
+@keyframes cf7{0%,100%{transform:translate(0,0)}38%{transform:translate(8px,-17px)}74%{transform:translate(-5px,-11px)}}
+@keyframes cf8{0%,100%{transform:translate(0,0)}42%{transform:translate(-5px,-13px)}76%{transform:translate(9px,-8px)}}
 
-  /* ───────── SERVICES ───────── */
-  .services { padding: 110px 0; }
-  .section-head {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-    align-items: end; margin-bottom: 56px;
-  }
-  .section-head h2 {
-    font-family: 'DM Serif Display'; font-size: clamp(40px, 4vw, 60px);
-    line-height: 1.05; margin: 12px 0 0; letter-spacing: -0.01em;
-  }
-  .section-head h2 em { font-style: italic; color: var(--orange); }
-  .section-head p { color: var(--muted); font-size: 17px; max-width: 460px; margin: 0; }
+.c-bubble{
+  position:absolute;
+  border-radius:999px;
+  padding:12px 24px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(232,80,31,.35);
+  color:rgba(255,255,255,.8);
+  font-weight:700;font-size:14px;
+  cursor:pointer;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:9px;
+  backdrop-filter:blur(6px);
+  box-shadow:0 0 22px rgba(232,80,31,.1),inset 0 1px 0 rgba(255,255,255,.07);
+  transition:background .25s,border-color .25s,color .25s,box-shadow .3s;
+  user-select:none;
+}
+.c-bubble:hover{
+  background:rgba(232,80,31,.18);
+  border-color:var(--orange);
+  color:#fff;
+  box-shadow:0 0 36px rgba(232,80,31,.45),0 0 10px rgba(232,80,31,.2),inset 0 1px 0 rgba(255,255,255,.1);
+  transform:scale(1.05);
+}
+.c-bubble.active{
+  background:rgba(232,80,31,.22);
+  border-color:var(--orange);
+  color:#fff;
+  box-shadow:0 0 48px rgba(232,80,31,.55),0 0 16px rgba(232,80,31,.3),inset 0 1px 0 rgba(255,255,255,.12);
+}
+.c-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--orange);
+  box-shadow:0 0 8px 2px rgba(232,80,31,.6);
+  flex-shrink:0;transition:box-shadow .25s
+}
+.c-bubble:hover .c-dot,.c-bubble.active .c-dot{box-shadow:0 0 12px 3px rgba(232,80,31,.9)}
 
-  .service-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    overflow: hidden;
-  }
-  .service {
-    background: var(--paper);
-    padding: 32px;
-    display: flex; gap: 22px;
-    transition: background .2s;
-  }
-  .service:hover { background: var(--cream); }
-  .service .num {
-    font-family: 'DM Serif Display'; font-size: 14px; color: var(--orange);
-    border: 1px solid var(--orange); border-radius: 50%;
-    width: 30px; height: 30px; flex-shrink: 0;
-    display: grid; place-items: center;
-    margin-top: 2px;
-  }
-  .service h4 { font-size: 18px; margin: 0 0 8px; font-weight: 800; }
-  .service p { color: var(--muted); font-size: 14.5px; margin: 0; }
+/* Bubble positions + animations */
+.c-bubble[data-id="repair"]   {top:6%;  left:3%;   animation:cf1 7.4s ease-in-out infinite}
+.c-bubble[data-id="wifi"]     {top:4%;  left:35%;  animation:cf2 8.2s ease-in-out infinite .7s}
+.c-bubble[data-id="security"] {top:8%;  left:66%;  animation:cf3 7.0s ease-in-out infinite 1.3s}
+.c-bubble[data-id="setup"]    {top:58%; left:8%;   animation:cf4 9.1s ease-in-out infinite .4s}
+.c-bubble[data-id="data"]     {top:64%; left:40%;  animation:cf5 7.7s ease-in-out infinite 1.0s}
+.c-bubble[data-id="m365"]     {top:55%; left:70%;  animation:cf6 8.5s ease-in-out infinite .6s}
+.c-bubble[data-id="support"]  {top:30%; left:20%;  animation:cf7 8.0s ease-in-out infinite 1.7s}
+.c-bubble[data-id="upgrades"] {top:28%; left:59%;  animation:cf8 8.8s ease-in-out infinite 0.9s}
 
-  /* ───────── PROMISE BAR ───────── */
-  .promise {
-    background: var(--orange);
-    color: #fff;
-    padding: 26px 0;
-    overflow: hidden;
-  }
-  .promise-marquee {
-    display: flex; gap: 60px;
-    font-family: 'DM Serif Display'; font-size: 28px; font-style: italic;
-    white-space: nowrap;
-    animation: scroll 32s linear infinite;
-  }
-  .promise-marquee span { display: inline-flex; align-items: center; gap: 60px; }
-  .promise-marquee .star { color: rgba(255,255,255,.5); font-size: 18px; }
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
+/* Bottom fade into next section */
+.cosmic-hero::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:120px;
+  background:linear-gradient(to bottom,transparent,var(--orange) 0%,var(--orange));
+  pointer-events:none;
+}
+/* Actually use cream */
+.cosmic-hero::after{background:linear-gradient(to bottom,transparent,#E8501F 0%);display:none}
+.cosmic-fade{
+  position:absolute;bottom:0;left:0;right:0;height:100px;
+  background:linear-gradient(to bottom,transparent,var(--cream));
+  pointer-events:none;z-index:5;
+}
 
-  /* ───────── PROCESS ───────── */
-  .process { padding: 110px 0; background: var(--paper); }
-  .step-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-    margin-top: 56px;
-  }
-  .step {
-    position: relative; padding: 28px 24px;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: var(--cream);
-  }
-  .step .step-n {
-    font-family: 'DM Serif Display'; color: var(--orange);
-    font-size: 56px; line-height: 1; opacity: .9;
-  }
-  .step h4 { font-size: 17px; margin: 14px 0 6px; }
-  .step p { font-size: 14px; color: var(--muted); margin: 0; }
+/* Mobile cloud */
+@media(max-width:700px){
+  .cosmic-cloud{height:auto;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .c-bubble{position:static !important;animation:none !important}
+  .cosmic-hero{min-height:auto;padding:60px 20px 48px}
+  .orb-ring{display:none}
+}
 
-  /* ───────── TRUST / TESTIMONIAL ───────── */
-  .trust { padding: 110px 0; }
-  .trust-row {
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px;
-    align-items: stretch;
-  }
-  .quote-card {
-    background: var(--cream-2);
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    padding: 48px;
-    position: relative;
-  }
-  .quote-card .qmark {
-    font-family: 'DM Serif Display'; font-size: 110px; line-height: .6;
-    color: var(--orange); position: absolute; top: 30px; left: 30px; opacity: .35;
-  }
-  .quote-card blockquote {
-    font-family: 'DM Serif Display'; font-size: 28px; line-height: 1.25;
-    margin: 30px 0 30px; padding: 0; position: relative;
-  }
-  .quote-card .who {
-    display: flex; align-items: center; gap: 14px; margin-top: 24px;
-  }
-  .avatar {
-    width: 48px; height: 48px; border-radius: 50%;
-    background: var(--orange-soft); border: 1.5px solid var(--orange);
-    display: grid; place-items: center; color: var(--orange); font-weight: 700;
-  }
-  .who-name { font-weight: 700; }
-  .who-loc { color: var(--muted); font-size: 13px; }
 
-  .stats-stack { display: flex; flex-direction: column; gap: 16px; }
-  .stat-card {
-    background: var(--paper); border: 1px solid var(--line);
-    padding: 28px 32px; border-radius: 18px;
-    display: flex; justify-content: space-between; align-items: center; gap: 24px;
-  }
-  .stat-card .v {
-    font-family: 'DM Serif Display'; font-size: 56px; line-height: 1; color: var(--orange);
-  }
-  .stat-card .l { font-size: 14px; color: var(--muted); max-width: 200px; text-align: right; font-weight: 600; }
+/* GUARANTEE STRIP */
+.guarantee-strip{background:var(--paper);border-bottom:1px solid var(--line);padding:28px 0}
+.g-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.g-item{display:flex;align-items:center;gap:12px;padding:10px 28px;border-right:1px solid var(--line);transition:background .2s}
+.g-item:last-child{border-right:none}
+.g-item:hover{background:var(--cream)}
+.g-icon{width:34px;height:34px;border-radius:9px;background:var(--orange-soft);display:grid;place-items:center;color:var(--orange);flex-shrink:0;transition:background .2s}
+.g-item:hover .g-icon{background:var(--orange);color:#fff}
+.g-item strong{display:block;font-size:13.5px;font-weight:800;line-height:1.2}
+.g-item span{font-size:12px;color:var(--muted);display:block;margin-top:2px}
 
-  /* ───────── PRICING ───────── */
-  .pricing { padding: 110px 0; background: var(--paper); }
-  .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
-  .price-card {
-    background: var(--cream); border: 1px solid var(--line); border-radius: 18px;
-    padding: 36px 32px;
-  }
-  .price-card.feature {
-    background: var(--ink); color: var(--cream); border-color: var(--ink); position: relative;
-  }
-  .price-card.feature::before {
-    content: "Most popular"; position: absolute; top: -12px; right: 24px;
-    background: var(--orange); color: #fff; padding: 5px 12px;
-    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-    border-radius: 999px;
-  }
-  .price-card h4 { margin: 0 0 6px; font-size: 14px; letter-spacing: .15em; text-transform: uppercase; color: var(--orange); }
-  .price-card .amount { font-family: 'DM Serif Display'; font-size: 56px; line-height: 1; margin: 12px 0 6px; }
-  .price-card .amount small { font-family: 'Manrope'; font-size: 14px; color: var(--muted); font-weight: 500; }
-  .price-card.feature .amount small { color: rgba(251,245,235,.6); }
-  .price-card .desc { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
-  .price-card.feature .desc { color: rgba(251,245,235,.7); }
-  .price-card ul { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; }
-  .price-card li { font-size: 14px; display: flex; gap: 10px; align-items: flex-start; }
-  .price-card li::before {
-    content: ""; width: 6px; height: 6px; border-radius: 50%;
-    background: var(--orange); flex-shrink: 0; margin-top: 8px;
-  }
-  .price-card .sub-cta {
-    display: block; text-align: center; padding: 13px;
-    border: 1.5px solid var(--ink); border-radius: 999px;
-    font-weight: 700; font-size: 14px;
-  }
-  .price-card.feature .sub-cta { border-color: var(--orange); background: var(--orange); color: #fff; }
-  .price-card .sub-cta:hover { background: var(--ink); color: var(--cream); }
-  .price-card.feature .sub-cta:hover { background: var(--orange-deep); border-color: var(--orange-deep); }
+/* SERVICE ROWS */
+.services-list{padding:90px 0}
+.sec-label{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.sec-label::before{content:'';display:block;width:16px;height:1.5px;background:var(--orange);flex-shrink:0}
+.svc-row{display:grid;grid-template-columns:1fr 1.45fr;gap:60px;padding:64px 0;border-bottom:1px solid var(--line);align-items:start;scroll-margin-top:80px;transition:background .4s,border-radius .4s,padding .4s}
+.svc-row:first-child{padding-top:0}
+.svc-row:last-child{border-bottom:none}
+.svc-row.lit{background:linear-gradient(135deg,var(--orange-soft),rgba(248,220,203,.3));border-radius:20px;padding-left:28px;padding-right:28px}
+.svc-num{font-family:'Fraunces',serif;font-size:12px;color:var(--orange);border:1px solid rgba(232,80,31,.3);border-radius:50%;width:30px;height:30px;display:grid;place-items:center;margin-bottom:18px}
+.svc-left h2{font-family:'Fraunces',serif;font-size:clamp(26px,3vw,38px);line-height:1.08;margin-bottom:14px;letter-spacing:-.014em;font-weight:600}
+.svc-left h2 em{font-style:italic;color:var(--orange-deep);font-weight:400}
+.svc-blurb{font-size:16.5px;color:var(--muted);margin-bottom:24px;line-height:1.68;font-weight:500}
+.svc-price{display:inline-flex;align-items:center;gap:8px;background:var(--orange-soft);border:1px solid rgba(232,80,31,.2);border-radius:999px;padding:7px 16px;font-size:13.5px;font-weight:800;color:var(--orange-deep)}
+.svc-right{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:34px 38px;transition:border-color .25s,box-shadow .25s}
+.svc-right:hover{border-color:rgba(232,80,31,.3);box-shadow:0 8px 32px rgba(232,80,31,.07)}
+.svc-right h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:700}
+.bullet-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.bullet-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink);font-weight:500}
+.bullet-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;margin-top:8px}
+.svc-cta{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;transition:background .2s,transform .15s;box-shadow:0 4px 14px rgba(232,80,31,.3)}
+.svc-cta:hover{background:var(--orange-deep);transform:translateY(-1px)}
+.svc-cta svg{transition:transform .2s}
+.svc-cta:hover svg{transform:translateX(3px)}
 
-  /* ───────── AREAS ───────── */
-  .areas { padding: 110px 0; }
-  .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .area-list {
-    display: grid; grid-template-columns: repeat(2,1fr); gap: 12px 24px;
-    margin-top: 32px;
-  }
-  .area-list a {
-    display: flex; align-items: center; gap: 10px;
-    padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
-    background: var(--paper); font-size: 14px; font-weight: 500;
-  }
-  .area-list a:hover { border-color: var(--orange); color: var(--orange); }
-  .area-list a .pin { width: 18px; height: 18px; color: var(--orange); }
+/* BOTTOM CTA */
+.cta-section{padding:80px 0}
+.cta-card{background:var(--ink);color:var(--cream);border-radius:32px;padding:64px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;position:relative;overflow:hidden}
+.cta-card::before{content:'';position:absolute;width:380px;height:380px;border-radius:50%;background:var(--orange);opacity:.12;right:-110px;bottom:-130px;pointer-events:none}
+.cta-card h2{font-family:'Fraunces',serif;font-size:clamp(30px,3.5vw,48px);line-height:1.05;margin-bottom:16px;font-weight:300;font-optical-sizing:auto}
+.cta-card h2 em{color:var(--orange);font-style:italic;font-weight:400}
+.cta-card p{color:rgba(251,245,235,.7);margin-bottom:28px;font-size:16px;line-height:1.7}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-tel{background:var(--cream);color:var(--ink);padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;display:inline-flex;gap:10px;align-items:center;transition:background .2s,transform .15s}
+.cta-tel:hover{background:var(--orange-soft);transform:translateY(-2px)}
+.cta-mail{border:1.5px solid rgba(251,245,235,.25);color:var(--cream);padding:14px 22px;border-radius:999px;font-weight:600;font-size:15px;display:inline-flex;gap:10px;align-items:center;transition:background .2s,border-color .2s,transform .15s}
+.cta-mail:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);transform:translateY(-2px)}
+.cta-right{background:var(--cream);color:var(--ink);border-radius:20px;padding:28px 30px;position:relative;z-index:2}
+.cta-right h5{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;font-weight:800}
+.hours{display:flex;flex-direction:column;gap:0;list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.hours li:last-child{border-bottom:none}
+.hours li span{color:var(--muted)}
 
-  .map-card {
-    background: var(--cream-2); border: 1.5px solid var(--orange);
-    border-radius: 24px; aspect-ratio: 4/3; position: relative; overflow: hidden;
-    background-image:
-      linear-gradient(var(--orange-soft) 1px, transparent 1px),
-      linear-gradient(90deg, var(--orange-soft) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-  .map-pin {
-    position: absolute; transform: translate(-50%, -100%);
-    display: flex; flex-direction: column; align-items: center; gap: 4px;
-  }
-  .map-pin .dot {
-    width: 14px; height: 14px; border-radius: 50%;
-    background: var(--orange); border: 3px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,.15);
-  }
-  .map-pin .lbl {
-    font-size: 11px; font-weight: 700; background: #fff; padding: 3px 8px;
-    border-radius: 4px; border: 1px solid var(--line); white-space: nowrap;
-    margin-bottom: 6px;
-  }
-  .map-route {
-    position: absolute; inset: 0; pointer-events: none;
-  }
+/* FOOTER */
+footer{background:var(--ink);color:var(--cream);padding:72px 0 36px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-brand .logo-name{color:var(--cream)}
+.foot-brand .logo-name .o{color:var(--orange)}
+.foot-brand .logo-sub{color:rgba(251,245,235,.38)}
+.foot-tagline{color:rgba(251,245,235,.45);font-size:14px;margin-top:16px;max-width:270px;line-height:1.65}
+.foot-col h6{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,245,235,.35);margin-bottom:16px;font-weight:700}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col li a{font-size:14px;color:rgba(251,245,235,.65);transition:color .2s}
+.foot-col li a:hover{color:var(--orange)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid rgba(255,255,255,.07);color:rgba(251,245,235,.3);font-size:13px}
+.foot-stamp{font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:rgba(251,245,235,.55)}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:inline-block}
 
-  /* ───────── CTA ───────── */
-  .cta { padding: 90px 0 110px; }
-  .cta-card {
-    background: var(--ink); color: var(--cream);
-    border-radius: 32px; padding: 72px;
-    display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px;
-    align-items: center; position: relative; overflow: hidden;
-  }
-  .cta-card::before {
-    content: ""; position: absolute;
-    width: 360px; height: 360px; border-radius: 50%;
-    background: var(--orange); opacity: .15;
-    right: -100px; bottom: -120px;
-  }
-  .cta-card h2 {
-    font-family: 'DM Serif Display'; font-size: clamp(36px,4vw,54px); line-height: 1.05;
-    margin: 0 0 18px; letter-spacing: -0.01em;
-  }
-  .cta-card h2 em { color: var(--orange); font-style: italic; }
-  .cta-card p { color: rgba(251,245,235,.7); margin: 0 0 32px; font-size: 16px; max-width: 460px; }
-  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .cta-tel {
-    background: var(--cream); color: var(--ink); padding: 16px 26px;
-    border-radius: 999px; font-weight: 700; display: inline-flex; gap: 10px; align-items: center;
-  }
-  .cta-mail {
-    border: 1.5px solid var(--cream); color: var(--cream); padding: 16px 24px;
-    border-radius: 999px; font-weight: 600; display: inline-flex; gap: 10px; align-items: center;
-  }
-  .cta-mail:hover { background: var(--cream); color: var(--ink); }
-
-  .cta-card .right {
-    background: var(--cream); color: var(--ink); border-radius: 18px;
-    padding: 28px; position: relative; z-index: 2;
-  }
-  .cta-card .right h5 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin: 0 0 10px; font-weight: 800; }
-  .cta-card .hours { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 14px; }
-  .cta-card .hours li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--line); }
-  .cta-card .hours li:last-child { border-bottom: 0; }
-  .cta-card .hours b { color: var(--ink); font-weight: 700; }
-
-  /* ───────── FOOTER ───────── */
-  footer {
-    background: var(--paper);
-    border-top: 1px solid var(--line);
-    padding: 60px 0 32px;
-  }
-  .foot-grid {
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
-    margin-bottom: 40px;
-  }
-  .foot-grid h6 { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; font-weight: 700; }
-  .foot-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
-  .foot-grid a:hover { color: var(--orange); }
-  .foot-tag { color: var(--muted); font-size: 14px; margin: 14px 0 0; max-width: 320px; }
-  .foot-bottom {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-top: 28px; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 13px;
-  }
-  .foot-bottom .tag { font-family: 'DM Serif Display'; color: var(--ink); font-style: italic; font-size: 16px; }
-
-  /* utility icon */
-  .ico { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-  .ico-lg { width: 28px; height: 28px; }
-
-  @media (max-width: 900px) {
-    .hero-grid, .section-head, .trust-row, .areas-grid, .cta-card, .foot-grid { grid-template-columns: 1fr; }
-    .pillar-grid, .service-grid, .step-grid, .price-grid { grid-template-columns: 1fr; }
-    .pillar { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 0; }
-    .nav-links { display: none; }
-    .cta-card { padding: 40px; }
-  }
+@media(max-width:900px){
+  .container{padding:0 20px}
+  .svc-row,.cta-card,.foot-grid{grid-template-columns:1fr}
+  .g-row{grid-template-columns:repeat(2,1fr)}
+  .g-item:nth-child(2){border-right:none}
+  .g-item:nth-child(3){border-bottom:none;border-right:1px solid var(--line)}
+  .g-item:nth-child(4){border-bottom:none}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .cta-card{padding:40px 28px}
+  .svc-row.lit{padding-left:16px;padding-right:16px}
+}
+@media(max-width:500px){
+  .g-row{grid-template-columns:1fr}
+  .g-item{border-right:none !important;border-bottom:1px solid var(--line)}
+  .g-item:last-child{border-bottom:none}
+}
 </style>
 </head>
 <body>
 
-<!-- ─────────── NAV ─────────── -->
-<nav class="nav">
+<!-- NAV -->
+<nav class="nav" id="nav">
   <div class="container nav-row">
-    <a class="logo" href="#">
-      <div class="logo-mark">
-        <svg viewBox="0 0 48 48" fill="none" stroke="#E8501F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- pitched roof -->
-          <path d="M6 22 L24 6 L42 22"/>
-          <!-- chimney -->
-          <path d="M34 11 V16"/>
-          <!-- house body -->
-          <path d="M9 20 V40 H39 V20"/>
-          <!-- laptop screen -->
-          <rect x="14" y="24" width="14" height="9" rx="0.8"/>
-          <!-- laptop base -->
-          <path d="M12 35 H30"/>
-          <!-- person head -->
-          <circle cx="33" cy="27" r="2.6"/>
-          <!-- person shoulders -->
-          <path d="M29.5 34 Q33 30 36.5 34"/>
-        </svg>
-      </div>
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 42 42" fill="none">
+        <rect width="42" height="42" rx="10" fill="rgba(232,80,31,.18)"/>
+        <path d="M7.5 18.5 Q21 7 34.5 18.5" stroke="#E8501F" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.5 23 Q21 14 30.5 23" stroke="#E8501F" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M16 27.5 Q21 21.5 26 27.5" stroke="#E8501F" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="21" cy="33.5" r="2.8" fill="#E8501F"/>
+      </svg>
       <div class="logo-text">
-        <div class="logo-word">Tech<span class="o">Neighbour</span></div>
-        <div class="logo-sub">IT SOLUTIONS</div>
+        <div class="logo-name">Tech<span class="o">Neighbour</span></div>
+        <div class="logo-sub">IT Solutions</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="services.html">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#areas">Areas</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="Services.html" class="active">Services</a>
+      <a href="index.html#process">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="index.html#contact">Contact</a>
     </div>
-    <a class="nav-cta" href="tel:YOUR_NUMBER">
+    <a class="nav-cta" href="tel:07700000000">
       <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       07700 000000
     </a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- ─────────── HERO ─────────── -->
-<header class="hero">
-  <svg class="horizon" viewBox="0 0 1400 180" preserveAspectRatio="none">
-    <g stroke="#E8501F" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".7">
-      <path d="M0 130 Q 200 90, 400 110 T 800 100 T 1200 115 T 1400 100"/>
-      <path d="M0 150 Q 250 120, 500 140 T 1000 130 T 1400 140"/>
-      <!-- tiny houses -->
-      <g transform="translate(180 110)"><path d="M0 0 L10 -10 L20 0 M2 0 V18 H18 V0"/></g>
-      <g transform="translate(220 115)"><path d="M0 0 L8 -8 L16 0 M1 0 V14 H15 V0"/></g>
-      <g transform="translate(1100 118)"><path d="M0 0 L12 -12 L24 0 M2 0 V20 H22 V0 M10 8 H14 V20"/></g>
-      <!-- fence -->
-      <g transform="translate(60 145)">
-        <path d="M0 0 H160"/>
-        <path d="M0 -8 V12 M20 -8 V12 M40 -8 V12 M60 -8 V12 M80 -8 V12 M100 -8 V12 M120 -8 V12 M140 -8 V12 M160 -8 V12"/>
-      </g>
-      <g transform="translate(1180 150)">
-        <path d="M0 0 H180"/>
-        <path d="M0 -8 V10 M22 -8 V10 M44 -8 V10 M66 -8 V10 M88 -8 V10 M110 -8 V10 M132 -8 V10 M154 -8 V10 M176 -8 V10"/>
-      </g>
-      <!-- trees -->
-      <g transform="translate(420 100)"><circle cx="0" cy="0" r="14"/><path d="M0 14 V32"/></g>
-      <g transform="translate(960 105)"><circle cx="0" cy="0" r="10"/><path d="M0 10 V26"/></g>
-    </g>
-  </svg>
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <a href="Services.html">Services</a>
+  <a href="index.html#process">How it works</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="index.html#areas">Areas</a>
+  <a href="index.html#contact">Contact</a>
+</div>
 
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow"><span class="dot"></span> Local IT support · Matlock &amp; Derbyshire DE4</span>
-      <h1>Big-city IT support,<br/>right on your <em>doorstep.</em></h1>
-      <p class="lede">From a Wi-Fi blackspot in the back bedroom to a Peak District business network that won't behave — I'll handle it, so you don't have to. Friendly, plain-English help from someone right here in Matlock.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">
-          Book a free diagnosis
-          <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#services" class="btn-ghost">See what we fix</a>
-      </div>
-      <div class="hero-meta">
-        <div class="m"><b>7 days</b><span>Available all week</span></div>
-        <div class="m"><b>Same day</b><span>Response in most cases</span></div>
-        <div class="m"><b>DE4 &amp; beyond</b><span>Matlock &amp; surrounds</span></div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════
+     COSMIC SERVICES HERO
+══════════════════════════════════════ -->
+<header class="cosmic-hero" id="cosmicHero">
+  <!-- Nebula -->
+  <div class="neb neb-1"></div>
+  <div class="neb neb-2"></div>
+  <div class="neb neb-3"></div>
+  <!-- Orbit rings -->
+  <div class="orb-ring" style="width:280px;height:280px"></div>
+  <div class="orb-ring" style="width:480px;height:480px"></div>
+  <div class="orb-ring" style="width:700px;height:700px;border-color:rgba(232,80,31,.04)"></div>
+  <div class="orb-ring" style="width:960px;height:960px;border-color:rgba(232,80,31,.03)"></div>
+  <!-- Fades into next section -->
+  <div class="cosmic-fade"></div>
 
-    <div class="hero-scene">
-      <div class="hero-disc">
-        <div class="hero-house">
-                                        <svg viewBox="0 0 240 220" fill="none" stroke="#E8501F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M168 79 V50 H182 V67"/>
-            <path d="M36 110 L120 38 L204 110"/>
-            <rect x="108" y="74" width="24" height="24" rx="1"/>
-            <line x1="120" y1="74" x2="120" y2="98"/>
-            <line x1="108" y1="86" x2="132" y2="86"/>
-            <path d="M50 106 V184 H190 V106"/>
-            <path d="M28 184 H212"/>
-            <rect x="68" y="122" width="74" height="48" rx="2"/>
-            <path d="M60 176 H150"/>
-            <circle cx="162" cy="138" r="10"/>
-            <path d="M148 170 Q162 152 176 170"/>
-          </svg>
-        </div>
-      </div>
-      <div class="free-badge">
-        <div>
-          <div class="big">FREE</div>
-          <div class="small">Remote diagnosis on your first call</div>
-        </div>
-      </div>
-      <div class="shield-badge">
-        <svg class="shield-svg" viewBox="0 0 130 150" fill="#fff" stroke="#E8501F" stroke-width="2.5" stroke-linejoin="round">
-          <path d="M10 12 Q 10 8 14 8 H 116 Q 120 8 120 12 V 78 Q 120 110 65 142 Q 10 110 10 78 Z"/>
-        </svg>
-        <div class="t">NO FIX,<br/>NO FEE</div>
-      </div>
-    </div>
+  <!-- Title -->
+  <div class="cosmic-title">
+    <div class="c-eyebrow">What I do</div>
+    <h1>Everything I fix,<br/>in <em>plain English.</em></h1>
+    <p>Click any service to jump straight to it</p>
+  </div>
+
+  <!-- Floating service bubbles -->
+  <div class="cosmic-cloud">
+    <div class="c-bubble" data-id="repair"><span class="c-dot"></span>Computer repair</div>
+    <div class="c-bubble" data-id="wifi"><span class="c-dot"></span>Wi-Fi &amp; networking</div>
+    <div class="c-bubble" data-id="security"><span class="c-dot"></span>Virus &amp; security</div>
+    <div class="c-bubble" data-id="setup"><span class="c-dot"></span>New device setup</div>
+    <div class="c-bubble" data-id="data"><span class="c-dot"></span>Data backup</div>
+    <div class="c-bubble" data-id="m365"><span class="c-dot"></span>Microsoft 365</div>
+    <div class="c-bubble" data-id="support"><span class="c-dot"></span>Ongoing IT support</div>
+    <div class="c-bubble" data-id="upgrades"><span class="c-dot"></span>Hardware upgrades</div>
   </div>
 </header>
 
-<!-- ─────────── PILLARS ─────────── -->
-<section class="pillars">
-  <div class="container pillar-grid">
-    <div class="pillar">
-      <div class="pillar-icon">
-        <svg class="ico ico-lg" viewBox="0 0 24 24"><path d="M3 12 L12 4 L21 12 M5 10 V20 H19 V10"/><rect x="10" y="13" width="4" height="7"/></svg>
-      </div>
-      <h3>For Home</h3>
-      <p>Family laptops, smart TVs, printers, broadband headaches — sorted in your living room over a cuppa.</p>
-      <a class="more" href="#services">Home help <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-    <div class="pillar">
-      <div class="pillar-icon">
-        <svg class="ico ico-lg" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7 V5 a2 2 0 0 1 2 -2 h2 a2 2 0 0 1 2 2 v2"/><path d="M3 13 H21"/></svg>
-      </div>
-      <h3>For Business</h3>
-      <p>Reliable IT for shops, studios and home offices — networks, backups, Microsoft 365 and someone to call when it matters.</p>
-      <a class="more" href="#services">Business help <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-    <div class="pillar">
-      <div class="pillar-icon">
-        <svg class="ico ico-lg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21 q8 -8 16 0"/></svg>
-      </div>
-      <h3>For You</h3>
-      <p>Lessons, advice and patient help — from setting up an iPad to safely shopping online. No jargon, ever.</p>
-      <a class="more" href="#services">Personal help <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-  </div>
-</section>
 
-<!-- ─────────── SERVICES ─────────── -->
-<section class="services" id="services">
+<!-- GUARANTEE STRIP -->
+<div class="guarantee-strip">
   <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow"><span class="dot"></span> What I fix</span>
-        <h2>Everyday tech, <em>handled</em>.</h2>
+    <div class="g-row">
+      <div class="g-item">
+        <div class="g-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L4.5 6.5V12c0 4.8 3.2 9 7.5 10.5C16.3 21 19.5 16.8 19.5 12V6.5L12 3z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg></div>
+        <div><strong>No fix, no fee</strong><span>You don't pay if I can't fix it</span></div>
       </div>
-      <p>Most jobs are done same-day. If I can't fix it remotely, I'll come to you — across Matlock, Bakewell, Wirksworth and the surrounding DE4 villages. No call-out fee.</p>
-    </div>
-
-    <div class="service-grid">
-      <div class="service"><div class="num">01</div><div><h4>Slow or broken computers fixed</h4><p>Diagnostics, repairs, SSD upgrades and tune-ups for Windows and Mac.</p></div></div>
-      <div class="service"><div class="num">02</div><div><h4>Wi-Fi setup and network problems</h4><p>Blackspot fixes, mesh systems, router setups, full-coverage installs.</p></div></div>
-      <div class="service"><div class="num">03</div><div><h4>Virus removal and security</h4><p>Malware removal, scam clean-ups, password managers, peace of mind.</p></div></div>
-      <div class="service"><div class="num">04</div><div><h4>New device setup and data transfer</h4><p>Out-of-box to fully configured: laptops, phones, printers, smart home.</p></div></div>
-      <div class="service"><div class="num">05</div><div><h4>On-site visits — I come to you</h4><p>Home visits and business calls across Matlock and the DE4 area. No call-out fee.</p></div></div>
-      <div class="service"><div class="num">06</div><div><h4>Plain English — no jargon, ever</h4><p>Patient explanations, written notes, and follow-up support included.</p></div></div>
-      <div class="service"><div class="num">07</div><div><h4>Email & Microsoft 365</h4><p>Custom domains, shared mailboxes, Outlook, Teams, OneDrive.</p></div></div>
-      <div class="service"><div class="num">08</div><div><h4>Lessons & 1-to-1 help</h4><p>Patient, plain-English sessions in your home — at your pace.</p></div></div>
-    </div>
-    <div style="margin-top:36px;">
-      <a href="services.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px;box-shadow:0 10px 24px -8px rgba(232,80,31,.4);transition:transform .15s;">
-        See all services in detail
-        <svg style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <div class="g-item">
+        <div class="g-icon"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div><strong>Free remote diagnosis</strong><span>First assessment is always on me</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12 L12 4 L21 12 M5 10 V20 H19 V10"/></svg></div>
+        <div><strong>I come to you</strong><span>On-site visits across Matlock and DE4</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-icon"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21 q8 -8 16 0"/></svg></div>
+        <div><strong>One person, always</strong><span>You'll always speak to the same person</span></div>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ─────────── PROMISE BAR ─────────── -->
-<section class="promise" aria-hidden="true">
-  <div class="promise-marquee">
-    <span>We'll handle it, so you don't have to. <span class="star">✦</span> No fix, no fee. <span class="star">✦</span> Plain English — no jargon, ever. <span class="star">✦</span> No job too small. <span class="star">✦</span> Local. Friendly. Reliable. <span class="star">✦</span></span>
-    <span>We'll handle it, so you don't have to. <span class="star">✦</span> No fix, no fee. <span class="star">✦</span> Plain English — no jargon, ever. <span class="star">✦</span> No job too small. <span class="star">✦</span> Local. Friendly. Reliable. <span class="star">✦</span></span>
-  </div>
-</section>
-
-<!-- ─────────── PROCESS ─────────── -->
-<section class="process" id="process">
+<!-- SERVICES LIST -->
+<section class="services-list">
   <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow"><span class="dot"></span> How it works</span>
-        <h2>Four steps,<br/>then it's <em>working</em>.</h2>
-      </div>
-      <p>You'll always speak to me — one person, start to finish. No call centres, no scripts, no surprise charges.</p>
-    </div>
 
-    <div class="step-grid">
-      <div class="step"><div class="step-n">01</div><h4>Tell me what's wrong</h4><p>Call, text or WhatsApp. A quick chat is usually enough to know what's needed.</p></div>
-      <div class="step"><div class="step-n">02</div><h4>Free remote diagnosis</h4><p>We'll check what we can over the phone or screen-share — at no charge.</p></div>
-      <div class="step"><div class="step-n">03</div><h4>Fix in your home</h4><p>If we need to come round, we book a slot that suits — usually same week.</p></div>
-      <div class="step"><div class="step-n">04</div><h4>Pay only if it's fixed</h4><p>If we can't sort it, you don't pay a penny. Simple as that.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── TRUST ─────────── -->
-<section class="trust">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow"><span class="dot"></span> Why neighbours choose us</span>
-        <h2>Trusted on the <em>doorstep</em>.</h2>
+    <div class="svc-row r" id="repair">
+      <div class="svc-left">
+        <div class="svc-num">01</div>
+        <h2>Computer <em>repair</em></h2>
+        <p class="svc-blurb">Slow machine? Won't turn on? Keeps crashing? Most repairs are sorted same day or next and I come to you. No need to box it up and post it somewhere.</p>
+        <div class="svc-price">From £60 · No fix, no fee</div>
       </div>
-      <p>I'm not a call centre. I'm the person you'll wave to in the village shop on Saturday morning.</p>
-    </div>
-    <div class="trust-row">
-      <div class="quote-card">
-        <div class="qmark">"</div>
-        <blockquote>Satisfaction guaranteed. No job too small, available 7 days a week — and you'll always speak to the same person.</blockquote>
-        <div class="who">
-          <div class="avatar">TN</div>
-          <div>
-            <div class="who-name">Our promise to you</div>
-            <div class="who-loc">Local. Friendly. Reliable.</div>
-          </div>
-        </div>
-      </div>
-      <div class="stats-stack">
-        <div class="stat-card"><div class="v">Free</div><div class="l">Remote diagnosis on your very first call — no charge</div></div>
-        <div class="stat-card"><div class="v">7 days</div><div class="l">Available Monday to Sunday, including weekends</div></div>
-        <div class="stat-card"><div class="v">1 person</div><div class="l">You'll always speak to the same person, every time</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── PRICING ─────────── -->
-<section class="pricing" id="pricing">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow"><span class="dot"></span> Honest pricing</span>
-        <h2>No surprises, <em>ever</em>.</h2>
-      </div>
-      <p>Most jobs are charged at a flat rate so you know exactly what you'll pay. Quotes given upfront, written down, sent by email.</p>
-    </div>
-
-    <div class="price-grid">
-      <div class="price-card">
-        <h4>Quick Fix</h4>
-        <div class="amount">£35<small> / 30 min</small></div>
-        <p class="desc">Smaller jobs done remotely or in a single quick visit.</p>
-        <ul>
-          <li>Printer / email setup</li>
-          <li>Password recovery</li>
-          <li>Software install</li>
-          <li>Phone & tablet sync</li>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Slow laptops and PCs diagnosed and fixed</li>
+          <li>Won't start, blue screen, or freezing — I'll find out why</li>
+          <li>Hardware faults: screens, keyboards, fans, hard drives</li>
+          <li>SSD upgrades to make old machines fast again</li>
+          <li>I come to your home or business — no need to travel</li>
+          <li>Honest advice if a repair isn't worth doing</li>
         </ul>
-        <a class="sub-cta" href="#contact">Book a quick fix</a>
-      </div>
-      <div class="price-card feature">
-        <h4>House Call</h4>
-        <div class="amount">£65<small> / hour</small></div>
-        <p class="desc">Our most-loved option — we come to you, no call-out fee.</p>
-        <ul>
-          <li>Anything from the services list</li>
-          <li>Wi-Fi & full network audit</li>
-          <li>Lessons & 1-to-1 help</li>
-          <li>Free follow-up phone support</li>
-        </ul>
-        <a class="sub-cta" href="#contact">Book a visit</a>
-      </div>
-      <div class="price-card">
-        <h4>Business Care</h4>
-        <div class="amount">From £120<small> / month</small></div>
-        <p class="desc">A friendly IT department for small teams of up to 10.</p>
-        <ul>
-          <li>Monitoring & backups</li>
-          <li>Priority response</li>
-          <li>Microsoft 365 management</li>
-          <li>Quarterly on-site review</li>
-        </ul>
-        <a class="sub-cta" href="#contact">Get in touch</a>
+        <a class="svc-cta" href="index.html#contact">Book a repair <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
+
+    <div class="svc-row r" id="wifi">
+      <div class="svc-left">
+        <div class="svc-num">02</div>
+        <h2>Wi-Fi &amp; <em>networking</em></h2>
+        <p class="svc-blurb">Dead spots, dropped connections, or a whole new network from scratch. Rural properties with thick stone walls are no problem — I've sorted plenty across the DE4 area.</p>
+        <div class="svc-price">From £65 · Quoted per site</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Wi-Fi that reaches every room, including outbuildings and barns</li>
+          <li>Mesh systems for large or awkward properties</li>
+          <li>Router setup, replacement and configuration</li>
+          <li>Separate guest Wi-Fi for customers or visitors</li>
+          <li>Wired ethernet runs for offices and business premises</li>
+          <li>Site survey first so I know exactly what's needed</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Sort my Wi-Fi <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="svc-row r" id="security">
+      <div class="svc-left">
+        <div class="svc-num">03</div>
+        <h2>Virus removal &amp; <em>security</em></h2>
+        <p class="svc-blurb">Viruses, ransomware, suspicious pop-ups, scam emails — I remove the problem, lock the door, and explain in plain English what happened and how to avoid it again.</p>
+        <div class="svc-price">From £55 · No fix, no fee</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Full system scan and virus/malware removal</li>
+          <li>Security software installed and set up properly</li>
+          <li>Passwords and accounts checked and secured</li>
+          <li>Scam email and phishing awareness</li>
+          <li>Plain English explanation of what happened</li>
+          <li>Follow-up check included at no extra cost</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Remove a virus <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="svc-row r" id="setup">
+      <div class="svc-left">
+        <div class="svc-num">04</div>
+        <h2>New device <em>setup</em></h2>
+        <p class="svc-blurb">New laptop, PC, phone, tablet or printer — I'll set it up exactly how you need it so you can get straight to work or play. Same day, in your home.</p>
+        <div class="svc-price">From £65</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Out of the box and fully ready to use same day</li>
+          <li>All your software, accounts and settings transferred over</li>
+          <li>Printers, scanners and other devices connected</li>
+          <li>Old device wiped safely if you're replacing it</li>
+          <li>A quick walkthrough so you know where everything is</li>
+          <li>Follow-up phone support included free</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Set up my device <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="svc-row r" id="data">
+      <div class="svc-left">
+        <div class="svc-num">05</div>
+        <h2>Data backup &amp; <em>recovery</em></h2>
+        <p class="svc-blurb">Lost files? Corrupted drive? Or just want proper peace of mind that your photos and documents are safe? I recover what I can and make sure it can't happen again.</p>
+        <div class="svc-price">From £75</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Data recovery from failed or corrupted hard drives</li>
+          <li>Automatic daily backup set up to external drive or cloud</li>
+          <li>Transfer everything from old computer to new</li>
+          <li>Backup actually tested — restored, not just assumed to work</li>
+          <li>Ongoing backup monitoring available for businesses</li>
+          <li>Photos, documents, emails — nothing left behind</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Protect my data <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="svc-row r" id="m365">
+      <div class="svc-left">
+        <div class="svc-num">06</div>
+        <h2>Email &amp; <em>Microsoft 365</em></h2>
+        <p class="svc-blurb">Proper email on your own domain, shared calendars, files you can reach from anywhere, and Teams for your team. Set up properly, first time.</p>
+        <div class="svc-price">From £120 setup · licences extra</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Email at yourname@yourbusiness.co.uk — looks professional</li>
+          <li>Outlook, Word, Excel set up on all your devices</li>
+          <li>Shared calendars and contacts for your whole team</li>
+          <li>OneDrive so files follow you between devices</li>
+          <li>Migration from old email — nothing gets left behind</li>
+          <li>Teams setup for video calls and chat</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Set up 365 <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="svc-row r" id="support">
+      <div class="svc-left">
+        <div class="svc-num">07</div>
+        <h2>Ongoing IT <em>support</em></h2>
+        <p class="svc-blurb">For businesses that want regular, reliable IT help without the cost of a full IT department. One phone number, one person, one monthly fee.</p>
+        <div class="svc-price">Pay-as-you-go £65/hr · Monthly from £85</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>Priority response — you go to the top of the queue</li>
+          <li>Monthly check-ins to keep everything running smoothly</li>
+          <li>Remote support when I can, on-site when I can't</li>
+          <li>Same person every time — no call-centre runaround</li>
+          <li>Honest, no-contract arrangements — pay for what you need</li>
+          <li>Advice on upgrades, security and new equipment</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Talk about support <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="svc-row r" id="upgrades">
+      <div class="svc-left">
+        <div class="svc-num">08</div>
+        <h2>Hardware <em>upgrades</em></h2>
+        <p class="svc-blurb">Before you spend £500 on a new laptop, let me look at your old one. Most slow machines can be made fast again for a fraction of the cost.</p>
+        <div class="svc-price">From £85 + parts</div>
+      </div>
+      <div class="svc-right">
+        <h4>What's included</h4>
+        <ul class="bullet-list">
+          <li>RAM upgrade — the cheapest big improvement you can make</li>
+          <li>SSD upgrade — old PCs feel brand new again</li>
+          <li>Battery replacement on most laptops</li>
+          <li>Fan cleaning and thermal paste — stops overheating</li>
+          <li>Honest assessment if it's genuinely not worth upgrading</li>
+          <li>Parts sourced and fitted — you don't need to do anything</li>
+        </ul>
+        <a class="svc-cta" href="index.html#contact">Upgrade my machine <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ─────────── AREAS ─────────── -->
-<section class="areas" id="areas">
+<!-- BOTTOM CTA -->
+<section class="cta-section">
   <div class="container">
-    <div class="areas-grid">
+    <div class="cta-card r">
       <div>
-        <span class="eyebrow"><span class="dot"></span> Local & nearby</span>
-        <h2 class="serif" style="font-size:clamp(38px,4vw,56px); line-height:1.05; margin:12px 0 20px;">Based in Matlock,<br/>covering <em>DE4 &amp; beyond.</em></h2>
-        <p style="color:var(--muted); max-width:480px;">I'm based in Matlock and cover the whole DE4 postcode area. If you're a little further out — just ring, I'll usually still come.</p>
-        <div class="area-list">
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Matlock</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Bakewell</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Wirksworth</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Matlock Bath</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Cromford</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Darley Dale</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Rowsley</a>
-          <a href="#"><svg class="ico pin" viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 1 1 14 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg> Winster</a>
-        </div>
-      </div>
-      <div class="map-card" style="padding:0; overflow:hidden; border-radius:24px;">
-        <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-1.7800%2C53.0200%2C-1.4500%2C53.2200&amp;layer=mapnik&amp;marker=53.1379%2C-1.5601"
-          style="width:100%; height:100%; min-height:380px; border:none; display:block;"
-          title="TechNeighbour service area — Matlock, Derbyshire DE4"
-          loading="lazy"
-        ></iframe><!--
-        <div class="map-pin" style="left: 48%; top: 52%;"><div class="lbl">Matlock</div><div class="dot"></div></div>
-        <div class="map-pin" style="left: 30%; top: 28%;"><div class="lbl">Bakewell</div><div class="dot"></div></div>
-        <div class="map-pin" style="left: 44%; top: 72%;"><div class="lbl">Wirksworth</div><div class="dot"></div></div>
-        <div class="map-pin" style="left: 50%; top: 62%;"><div class="lbl">Matlock Bath</div><div class="dot"></div></div>
-        <div class="map-pin" style="left: 42%; top: 68%;"><div class="lbl">Cromford</div><div class="dot"></div></div>
-        <div class="map-pin" style="left: 52%; top: 38%;"><div class="lbl">Darley Dale</div><div class="dot"></div></div>-->
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── CTA ─────────── -->
-<section class="cta" id="contact">
-  <div class="container">
-    <div class="cta-card">
-      <div>
-        <span class="eyebrow" style="color:var(--orange)"><span class="dot"></span> Get in touch</span>
-        <h2 style="margin-top:14px;">Got something playing up?<br/><em>Let's sort it.</em></h2>
-        <p>Give me a call, send a text, or drop a message below — I usually reply within the hour during the day. The first remote diagnosis is on me.</p>
+        <div class="sec-label" style="color:var(--orange)">Get in touch</div>
+        <h2 style="color:var(--cream);margin-top:12px">Not sure what<br/><em>you need?</em></h2>
+        <p>That's fine — most people aren't. Just tell me what's happening and I'll suggest the simplest fix. No pressure, no upsell, ever.</p>
         <div class="cta-actions">
-          <a class="cta-tel" href="tel:YOUR_NUMBER">
+          <a class="cta-tel" href="tel:07700000000">
             <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             07700 000000
           </a>
-          <a class="cta-mail" href="https://wa.me/447700000000" style="background:rgba(37,211,102,0.15); border-color:rgba(37,211,102,0.6); color:#fff; margin-right:8px;"><svg class="ico" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.997 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.907-1.404A9.955 9.955 0 0011.997 22C17.523 22 22 17.523 22 12S17.523 2 11.997 2z" fill="none"/></svg> WhatsApp me</a>
-          <a class="cta-mail" href="mailto:hello@tech-neighbour.co.uk"><svg class="ico" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> hello@tech-neighbour.co.uk</a>
+          <a class="cta-mail" href="mailto:hello@tech-neighbour.co.uk">
+            <svg class="ico" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            hello@tech-neighbour.co.uk
+          </a>
         </div>
       </div>
-      <div class="right">
+      <div class="cta-right r d1">
         <h5>Opening hours</h5>
         <ul class="hours">
-          <li><span>Mon — Fri</span><b>8am — 8pm</b></li>
-          <li><span>Saturday</span><b>9am — 6pm</b></li>
-          <li><span>Sunday</span><b>10am — 4pm</b></li>
+          <li><span>Mon–Fri</span><b>8am–8pm</b></li>
+          <li><span>Saturday</span><b>9am–6pm</b></li>
+          <li><span>Sunday</span><b>10am–4pm</b></li>
           <li><span>Emergencies</span><b>By arrangement</b></li>
         </ul>
       </div>
@@ -854,52 +596,53 @@
   </div>
 </section>
 
-<!-- ─────────── FOOTER ─────────── -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="foot-grid">
-      <div>
-        <a class="logo" href="#">
-          <div class="logo-mark">
-            <svg viewBox="0 0 48 48" fill="none" stroke="#E8501F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 22 L24 6 L42 22"/>
-              <path d="M34 11 V16"/>
-              <path d="M9 20 V40 H39 V20"/>
-              <rect x="14" y="24" width="14" height="9" rx="0.8"/>
-              <path d="M12 35 H30"/>
-              <circle cx="33" cy="27" r="2.6"/>
-              <path d="M29.5 34 Q33 30 36.5 34"/>
-            </svg>
-          </div>
+      <div class="foot-brand">
+        <a class="logo" href="index.html">
+          <svg class="logo-mark" viewBox="0 0 42 42" fill="none">
+            <rect width="42" height="42" rx="10" fill="rgba(232,80,31,.18)"/>
+            <path d="M7.5 18.5 Q21 7 34.5 18.5" stroke="#E8501F" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M11.5 23 Q21 14 30.5 23" stroke="#E8501F" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M16 27.5 Q21 21.5 26 27.5" stroke="#E8501F" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="21" cy="33.5" r="2.8" fill="#E8501F"/>
+          </svg>
           <div class="logo-text">
-            <div class="logo-word">Tech<span class="o">Neighbour</span></div>
-            <div class="logo-sub">IT SOLUTIONS</div>
+            <div class="logo-name">Tech<span class="o">Neighbour</span></div>
+            <div class="logo-sub">IT Solutions</div>
           </div>
         </a>
-        <p class="foot-tag">Big-city IT support, right on your doorstep. Serving Matlock and the Derbyshire DE4 area.</p>
+        <p class="foot-tagline">Big-city IT solutions, right on your doorstep. Serving Matlock and the Derbyshire DE4 area.</p>
       </div>
-      <div>
+      <div class="foot-col">
         <h6>Services</h6>
         <ul>
-          <li><a href="#services">For Home</a></li>
-          <li><a href="#services">For Business</a></li>
-          <li><a href="#services">For You</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#repair">Computer repair</a></li>
+          <li><a href="#wifi">Wi-Fi &amp; networking</a></li>
+          <li><a href="#security">Virus removal</a></li>
+          <li><a href="#setup">New device setup</a></li>
+          <li><a href="#data">Data backup</a></li>
+          <li><a href="#m365">Microsoft 365</a></li>
+          <li><a href="#support">IT support</a></li>
+          <li><a href="#upgrades">Upgrades</a></li>
         </ul>
       </div>
-      <div>
+      <div class="foot-col">
         <h6>Company</h6>
         <ul>
-          <li><a href="#process">How it works</a></li>
-          <li><a href="#areas">Areas covered</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Privacy</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#process">How it works</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#areas">Areas covered</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
-      <div>
+      <div class="foot-col">
         <h6>Get in touch</h6>
         <ul>
-          <li><a href="tel:YOUR_NUMBER">07700 000000</a></li>
+          <li><a href="tel:07700000000">07700 000000</a></li>
           <li><a href="mailto:hello@tech-neighbour.co.uk">hello@tech-neighbour.co.uk</a></li>
           <li><a href="#">Facebook — coming soon</a></li>
           <li><a href="https://tech-neighbour.co.uk">tech-neighbour.co.uk</a></li>
@@ -908,10 +651,74 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 TechNeighbour IT Solutions. Matlock, Derbyshire.</span>
-      <span class="tag">Local. Friendly. Reliable.</span>
+      <span class="foot-stamp">Local. Friendly. Reliable.</span>
     </div>
   </div>
 </footer>
 
+<script>
+// Nav: switch to light mode when scrolled past the cosmic hero
+const nav = document.getElementById('nav');
+const cosmicHero = document.getElementById('cosmicHero');
+const switchPoint = cosmicHero ? cosmicHero.offsetHeight - 80 : 300;
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('light', window.scrollY > switchPoint);
+}, { passive: true });
+
+// Mobile burger
+const burger = document.getElementById('burger');
+const mobNav = document.getElementById('mobNav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  mobNav.classList.toggle('open');
+  document.body.style.overflow = mobNav.classList.contains('open') ? 'hidden' : '';
+});
+mobNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    mobNav.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Generate starfield
+(function() {
+  const hero = document.getElementById('cosmicHero');
+  if (!hero) return;
+  const count = 160;
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('div');
+    const big = Math.random() < 0.12;
+    const sz = big ? (1.5 + Math.random()) : (0.8 + Math.random() * 0.7);
+    const op = 0.2 + Math.random() * 0.8;
+    const dur = 2.5 + Math.random() * 4;
+    const delay = Math.random() * 5;
+    s.className = 'star';
+    s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;opacity:${op};animation:twinkle ${dur}s ease-in-out ${delay}s infinite`;
+    frag.appendChild(s);
+  }
+  hero.appendChild(frag);
+})();
+
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.r').forEach(el => io.observe(el));
+
+// Bubble click handler
+document.querySelectorAll('.c-bubble').forEach(bubble => {
+  bubble.addEventListener('click', () => {
+    document.querySelectorAll('.c-bubble').forEach(b => b.classList.remove('active'));
+    bubble.classList.add('active');
+    const target = document.getElementById(bubble.dataset.id);
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.classList.add('lit');
+    setTimeout(() => target.classList.remove('lit'), 2000);
+  });
+});
+</script>
 </body>
 </html>
