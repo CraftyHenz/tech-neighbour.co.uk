@@ -104,6 +104,8 @@ svg{display:block}
 .h-ring::before{content:'';position:absolute;inset:18px;border-radius:50%;border:1px dashed rgba(229,215,191,.8)}
 .h-ring-c{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 .h-house{width:58%;animation:float 7s ease-in-out infinite}
+.h-ring-c picture{display:contents}
+.h-logo{width:88%;height:auto;border-radius:50%;box-shadow:0 14px 34px rgba(15,11,8,.12)}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
 .h-badge-free{position:absolute;top:-8px;left:-22px;width:108px;height:108px;border-radius:50%;background:var(--orange);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 28px rgba(232,80,31,.5);z-index:3;animation:badge-bounce 5s ease-in-out infinite}
 @keyframes badge-bounce{0%,100%{transform:rotate(-14deg) translateY(0)}50%{transform:rotate(-14deg) translateY(-12px)}}
@@ -552,19 +554,10 @@ footer{background:var(--ink);color:var(--cream);padding:72px 0 36px}
         <div class="h-dot"></div>
         <div class="h-dot"></div>
         <div class="h-ring-c">
-          <svg class="h-house" viewBox="0 0 240 220" fill="none" stroke="#E8501F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M36 108 L120 36 L204 108"/>
-            <path d="M168 77 V50 H182 V65"/>
-            <path d="M50 104 V182 H190 V104"/>
-            <rect x="70" y="120" width="60" height="42" rx="3"/>
-            <path d="M60 162 H150"/>
-            <path d="M94 120 V105 M126 120 V105"/>
-            <path d="M94 148 Q100 138 106 148" stroke-width="2.5"/>
-            <path d="M89 153 Q100 131 111 153" stroke-width="2.5"/>
-            <circle cx="100" cy="154" r="2.5" fill="#E8501F"/>
-            <rect x="158" y="136" width="22" height="46" rx="2"/>
-            <circle cx="168" cy="160" r="2" fill="#E8501F"/>
-          </svg>
+          <picture>
+            <source srcset="/logo-badge-1000.webp" type="image/webp" />
+            <img class="h-house h-logo" src="/logo-badge-640.png" width="640" height="640" alt="TechNeighbour IT Solutions: for home, for business, for you" />
+          </picture>
         </div>
       </div>
       <div class="h-badge-free">
